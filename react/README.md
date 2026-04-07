@@ -1,73 +1,106 @@
-# React + TypeScript + Vite
+# React Portfolio Development
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This folder contains the React source code for Hardip Parmar's portfolio website.
 
-Currently, two official plugins are available:
+## 🏗️ Project Structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+parmarhardip.github.io/
+├── react/                    # React source code (this folder)
+│   ├── src/                  # React components and utilities
+│   ├── public/              # Static assets
+│   ├── package.json         # Dependencies and scripts
+│   └── vite.config.ts       # Build configuration
+├── assets/                  # Deployed assets (generated from build)
+├── index.html              # Deployed site (generated from build)
+└── other GitHub Pages files...
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Development Workflow
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
+- Node.js 18+ installed
+- Git configured
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Development Commands
+
+```bash
+# Navigate to React source
+cd react/
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production (outputs to parent directory)
+npm run build
+
+# Build and deploy to GitHub Pages
+npm run deploy
 ```
+
+## 🔧 Key Features
+
+### Dynamic Case Study System
+- Uses `import.meta.glob` for automatic case study discovery
+- Add new case studies by creating JSON files in `src/data/case-studies/`
+- Control homepage visibility with `showInHomepage` flag
+
+### OJS Projects Modal
+- Shows live journal projects in a clean modal interface
+- Configured in `ojs-journal-ecosystem.json`
+
+### Responsive Design
+- Mobile-first approach with Tailwind CSS
+- Smooth animations and interactions
+- Auto-switching testimonials
+
+## 📝 Adding New Case Studies
+
+1. Create a new JSON file in `src/data/case-studies/`
+2. Follow the existing structure (see `lms-platform.json` as example)
+3. Add required images to `public/assets/images/`
+4. Set `showInHomepage: true/false` to control homepage display
+5. Build and deploy
+
+## 🎯 Build Configuration
+
+The project is configured to:
+- Build React source to parent directory (GitHub Pages root)
+- Preserve existing GitHub Pages files
+- Generate optimized bundles with proper asset handling
+- Support dynamic routing for case studies
+
+## 📦 Deployment
+
+The site automatically deploys to https://parmarhardip.github.io/ when you run:
+
+```bash
+npm run deploy
+```
+
+This command:
+1. Builds the React app
+2. Outputs files to GitHub Pages root
+3. Commits changes to git
+4. Pushes to GitHub Pages
+
+## 🔍 TypeScript & Type Safety
+
+Full TypeScript support with interfaces for:
+- Case studies and content types
+- Component props
+- API responses
+
+## 🎨 Styling
+
+- **Tailwind CSS** for utility-first styling
+- **CSS Variables** for consistent theming
+- **Responsive Design** patterns
+- **Animation** utilities for smooth interactions
+
+---
+
+Built with ❤️ using React + TypeScript + Vite + Tailwind CSS
