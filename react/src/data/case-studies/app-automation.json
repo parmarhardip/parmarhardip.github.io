@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "title": "App Eco-Automation System | Hardip Parmar - Case Study",
+    "description": "How I built an intelligent automation platform that streamlines app deployment pipelines and reduces manual intervention by 90%.",
+    "keywords": ["Automation", "DevOps", "CI/CD", "Docker", "Kubernetes", "monitoring"],
+    "ogImage": "/assets/images/app-automation.jpg"
+  },
+  "hero": {
+    "title": "App Eco-<span class=\"accent-underline\">Automation System</span>",
+    "subtitle": "90% Manual Reduction",
+    "client": "TechFlow Solutions",
+    "role": "DevOps Architect",
+    "technologies": ["Docker", "Kubernetes", "Jenkins", "Terraform"],
+    "image": "/assets/images/app-automation.jpg"
+  },
+  "challenge": {
+    "title": "The Challenge",
+    "description": "TechFlow Solutions was struggling with manual deployment processes across 50+ microservices. Each deployment required multiple engineering hours, was prone to human error, and created bottlenecks during critical release windows.",
+    "additionalInfo": "The lack of standardized deployment pipelines led to inconsistent environments, while monitoring gaps made it difficult to identify and resolve issues quickly.",
+    "problems": [
+      {
+        "icon": "warning",
+        "title": "High-Concurrency Failure",
+        "description": "Peak exam windows (50k+ simultaneous users) caused 15s+ response times.",
+        "color": "secondary"
+      },
+      {
+        "icon": "sync_problem",
+        "title": "OJS Synchronization Gap",
+        "description": "Manual data entry for peer-reviewed journals was prone to 12% error rates.",
+        "color": "primary"
+      }
+    ]
+  },
+  "solution": {
+    "title": "The Architectural Solution",
+    "subtitle": "Decoupling core functionalities and implementing a high-performance caching layer.",
+    "description": "Built a comprehensive solution focusing on scalability, performance, and seamless integration.",
+    "features": [
+      {
+        "icon": "extension",
+        "title": "Custom Plugin Development",
+        "description": "Built a proprietary event-driven middleware to bridge WordPress and OJS metadata without blocking PHP execution.",
+        "color": "primary"
+      },
+      {
+        "icon": "hub",
+        "title": "OJS Integration",
+        "description": "Implemented a bi-directional REST API bridge that synchronizes student research directly with OJS publication queues.",
+        "color": "secondary"
+      },
+      {
+        "icon": "bolt",
+        "title": "REST API Optimization",
+        "description": "Refactored the core API endpoints with a Redis-backed caching strategy, reducing DB queries by 85%.",
+        "color": "primary"
+      }
+    ]
+  },
+  "technicalDeepDive": {
+    "title": "Technical Deep Dive: <span class=\"text-secondary\">OJS Sync Workflow</span>",
+    "description": "The core of the solution involved architecting a headless bridge. We utilized WordPress `wp_remote_post` hooks combined with a custom Redis queue to ensure that research paper submissions remained asynchronous. This meant that if the OJS server was under heavy load, the student's LMS experience remained unaffected.",
+    "codeExample": {
+      "title": "High-performance Sync Hook",
+      "description": "Asynchronous queue implementation for OJS synchronization",
+      "code": "// High-performance Sync Hook\nadd_action('lms_submission_complete', function($submission_id) {\n    $payload = prepare_ojs_payload($submission_id);\n    \n    // Dispatch to Asynchronous Queue\n    WP_Async_Task::dispatch('sync_to_ojs_endpoint', [\n        'data' => $payload,\n        'retry' => 3\n    ]);\n}, 10, 1);",
+      "language": "php"
+    },
+    "architectureImage": "/assets/images/plugin-architecture.jpg"
+  },
+  "results": {
+    "metrics": [
+      { "value": "99.9%", "label": "Uptime" },
+      { "value": "60%", "label": "Faster Loading" },
+      { "value": "500k", "label": "Users Scaled" },
+      { "value": "0", "label": "Exam Failures" }
+    ],
+    "backgroundColor": "on-surface"
+  },
+  "testimonials": [
+    {
+      "quote": "Hardip's ability to navigate complex architectural challenges while maintaining an executive perspective on business goals is rare. He is a pivotal asset to any high-scale project.",
+      "author": "Ahmad Alameldin",
+      "title": "Engineering Director",
+      "initials": "AA"
+    },
+    {
+      "quote": "I've seen many developers code, but few engineer with the precision Hardip brings to the WordPress core. His work at BuddyBoss sets the gold standard for LMS scalability.",
+      "author": "Amit Gupta",
+      "title": "Tech Architect",
+      "initials": "AG"
+    }
+  ],
+  "nextProject": {
+    "title": "App Eco-Automation System",
+    "href": "/case-study/app-automation"
+  },
+  "showInHomepage": false
+}

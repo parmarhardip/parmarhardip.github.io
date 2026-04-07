@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "title": "Modular Plugin Architecture | Hardip Parmar - Case Study",
+    "description": "How I designed a scalable plugin architecture adopted by multiple enterprise clients for rapid development and deployment.",
+    "keywords": ["Plugin Architecture", "Modular Design", "WordPress", "Enterprise", "scalability"],
+    "ogImage": "/assets/images/plugin-architecture.jpg"
+  },
+  "hero": {
+    "title": "Modular Plugin <span class=\"accent-underline\">Architecture Framework</span>",
+    "subtitle": "Enterprise Adoption",
+    "client": "Plugin Systems Inc",
+    "role": "Senior Architect",
+    "technologies": ["WordPress", "PHP", "React", "TypeScript"],
+    "image": "/assets/images/plugin-architecture.jpg"
+  },
+  "challenge": {
+    "title": "The Challenge",
+    "description": "Multiple enterprise clients needed a standardized way to build and deploy custom functionality without touching core systems. The existing approach required custom code for each implementation, leading to maintenance nightmares.",
+    "additionalInfo": "Legacy systems lacked modularity, making it difficult to scale features across different client environments while maintaining code quality and security standards.",
+    "problems": [
+      {
+        "icon": "warning",
+        "title": "Code Duplication",
+        "description": "Each client implementation required custom code, leading to 70% duplicate functionality across projects.",
+        "color": "secondary"
+      },
+      {
+        "icon": "sync_problem",
+        "title": "Deployment Complexity",
+        "description": "Manual deployment processes took 4+ hours per client with high risk of environment-specific failures.",
+        "color": "primary"
+      }
+    ]
+  },
+  "solution": {
+    "title": "The Architectural Solution",
+    "subtitle": "Building a standardized, modular plugin ecosystem for enterprise deployments.",
+    "description": "Created a comprehensive plugin architecture that allows for rapid development and deployment.",
+    "features": [
+      {
+        "icon": "extension",
+        "title": "Modular Plugin System",
+        "description": "Developed a core framework that allows plugins to be independently developed, tested, and deployed without affecting other system components.",
+        "color": "primary"
+      },
+      {
+        "icon": "settings",
+        "title": "Configuration Management",
+        "description": "Implemented a centralized configuration system that allows per-client customization without code changes.",
+        "color": "secondary"
+      },
+      {
+        "icon": "bolt",
+        "title": "Auto-Deployment Pipeline",
+        "description": "Created automated deployment workflows that reduce deployment time from hours to minutes with zero downtime.",
+        "color": "primary"
+      }
+    ]
+  },
+  "technicalDeepDive": {
+    "title": "Technical Deep Dive: <span class=\"text-secondary\">Plugin Registry System</span>",
+    "description": "The plugin system uses a centralized registry that manages plugin dependencies, configurations, and lifecycle events. Each plugin is self-contained with its own API endpoints and database migrations.",
+    "codeExample": {
+      "title": "Plugin Registration System",
+      "description": "Auto-discovery and registration of plugins with dependency management",
+      "code": "// Plugin Registration System\nclass PluginRegistry {\n    private static plugins: Map<string, PluginInterface> = new Map();\n    \n    public static register(plugin: PluginInterface): void {\n        // Validate dependencies\n        this.validateDependencies(plugin.getDependencies());\n        \n        // Register plugin\n        this.plugins.set(plugin.getId(), plugin);\n        \n        // Initialize plugin\n        plugin.initialize();\n    }\n    \n    private static validateDependencies(deps: string[]): void {\n        deps.forEach(dep => {\n            if (!this.plugins.has(dep)) {\n                throw new Error(`Dependency ${dep} not found`);\n            }\n        });\n    }\n}",
+      "language": "typescript"
+    },
+    "architectureImage": "/assets/images/plugin-architecture.jpg"
+  },
+  "results": {
+    "metrics": [
+      { "value": "85%", "label": "Code Reuse" },
+      { "value": "10x", "label": "Faster Deployment" },
+      { "value": "12", "label": "Enterprise Clients" },
+      { "value": "0", "label": "Deployment Failures" }
+    ],
+    "backgroundColor": "on-surface"
+  },
+  "testimonials": [
+    {
+      "quote": "Hardip's plugin architecture transformed our development process. We can now deploy new features to multiple clients in minutes instead of days.",
+      "author": "Jennifer Walsh",
+      "title": "CTO",
+      "initials": "JW"
+    },
+    {
+      "quote": "The modular approach has saved us countless hours of development time. Each plugin works seamlessly across our entire client base.",
+      "author": "David Kim",
+      "title": "Lead Developer",
+      "initials": "DK"
+    }
+  ],
+  "nextProject": {
+    "title": "High-Performance LMS",
+    "href": "/case-study/lms-platform"
+  },
+  "showInHomepage": false
+}

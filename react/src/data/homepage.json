@@ -1,0 +1,141 @@
+{
+  "hero": {
+    "title": "Transforming Vision into <span class=\"accent-underline\">Scalable WordPress</span> Solutions.",
+    "subtitle": "Lead Developer & System Architect",
+    "description": "WordPress Developer with 10+ years of experience building scalable, high-performance websites and applications. I specialize in custom plugin development, LMS integrations, and OJS (Open Journal Systems) implementations for academic publishing platforms.",
+    "image": "/assets/images/hardip-parmar.jpg",
+    "ctaButtons": {
+      "primary": {
+        "text": "Let's Collaborate",
+        "href": "#contact",
+        "icon": "handshake"
+      },
+      "secondary": {
+        "text": "View Portfolio",
+        "href": "#portfolio"
+      }
+    }
+  },
+  "expertise": {
+    "title": "A Consultative Approach to Engineering Excellence",
+    "description": "My decade of experience at the heart of industry-leading products like BuddyBoss has taught me that the best solutions are collaborative. I don't just write code; I act as a technical extension of your team, identifying bottlenecks before they appear and architecting for the long term.",
+    "stats": [
+      { "value": "10+", "label": "Years of WordPress Development" },
+      { "value": "20k+", "label": "Global Journals (OJS Platform)" }
+    ],
+    "features": [
+      {
+        "title": "Innovative Solutions",
+        "description": "Translating complex business requirements into elegant, high-performing technical roadmaps.",
+        "icon": "lightbulb"
+      },
+      {
+        "title": "Architectural Stability",
+        "description": "Building robust frameworks that support millions of users with rock-solid security and speed.",
+        "icon": "hub"
+      }
+    ],
+    "cards": [
+      {
+        "icon": "code_blocks",
+        "title": "WordPress Engineering",
+        "description": "Advanced plugin development and core architectural enhancements using modern PHP patterns and REST APIs.",
+        "borderColor": "primary"
+      },
+      {
+        "icon": "groups",
+        "title": "Community & LMS",
+        "description": "Deep integration expertise with LearnDash and BuddyBoss to create engaging, high-traffic learning platforms.",
+        "borderColor": "secondary"
+      },
+      {
+        "icon": "menu_book",
+        "title": "Open Journal Systems (OJS)",
+        "description": "Specialized OJS implementations for scholarly publishing. End-to-end workflow management from manuscript submission to publication with open access focus.",
+        "borderColor": "primary"
+      },
+      {
+        "icon": "speed",
+        "title": "Performance Strategy",
+        "description": "Deep-level query profiling, object caching, and database tuning to ensure millisecond response times."
+      },
+      {
+        "icon": "api",
+        "title": "Custom Integrations",
+        "description": "Bridging WordPress with mobile applications, external CRMs, and complex third-party data ecosystems."
+      },
+      {
+        "icon": "verified_user",
+        "title": "System Integrity",
+        "description": "Comprehensive security audits and hardening for mission-critical enterprise applications."
+      }
+    ]
+  },
+  "career": {
+    "title": "Professional Journey",
+    "items": [
+      {
+        "title": "Lead Developer - BuddyBoss App Plugin Team",
+        "company": "BuddyBoss LLC",
+        "period": "2022 — 2026",
+        "description": "Promoted to Lead Developer for architecting white-label app automation CLI tools and leading enterprise client integrations. Developed custom plugins and LMS integrations for LearnDash and Tutor LMS platforms.",
+        "current": true
+      },
+      {
+        "title": "Sr. WordPress Developer",
+        "company": "BuddyBoss LLC",
+        "period": "2020 — 2022",
+        "description": "Collaborated with agency clients to implement custom BuddyBoss App features using REST APIs, focusing on seamless LMS integrations and client-specific workflows.",
+        "current": false
+      },
+      {
+        "title": "Jr. WordPress Developer",
+        "company": "Multidots Solutions",
+        "period": "2016 — 2020",
+        "description": "Gained foundational experience in WordPress theme customization and plugin development, working alongside senior developers on enterprise client projects.",
+        "current": false
+      }
+    ]
+  },
+  "toolkit": {
+    "title": "The Technical Toolkit",
+    "technologies": [
+      "PHP", "WordPress", "JavaScript (ES6+)", "REST APIs", "MySQL", "Docker", "Git",
+      "LearnDash", "BuddyBoss", "TutorLMS", "WooCommerce", "BuddyPress",
+      "OJS (Open Journal Systems)", "Custom Plugin Development", "Performance Optimization"
+    ]
+  },
+  "testimonials": [
+    {
+      "quote": "Hardip's ability to navigate complex architectural challenges while maintaining an executive perspective on business goals is rare. He is a pivotal asset to any high-scale project.",
+      "author": "Ahmad Alameldin",
+      "title": "Engineering Director",
+      "initials": "AA"
+    },
+    {
+      "quote": "I've seen many developers code, but few engineer with the precision Hardip brings to the WordPress core. His work at BuddyBoss sets the gold standard for LMS scalability.",
+      "author": "Amit Gupta",
+      "title": "Tech Architect",
+      "initials": "AG"
+    },
+    {
+      "quote": "Working with Hardip transformed our development workflow. His strategic thinking and technical execution consistently deliver enterprise-grade solutions that scale beautifully.",
+      "author": "Sarah Chen",
+      "title": "Product Lead",
+      "initials": "SC"
+    },
+    {
+      "quote": "The modularity and performance of Hardip's WordPress architecture enabled us to launch three major features ahead of schedule. His code quality is exceptional.",
+      "author": "Marcus Rodriguez",
+      "title": "Lead Developer",
+      "initials": "MR"
+    }
+  ],
+  "contact": {
+    "title": "Let's Build Your <br/><span class=\"accent-underline\">Next Innovative Platform</span>",
+    "subtitle": "READY TO COLLABORATE?",
+    "description": "Whether you're an agency needing WordPress development expertise or an academic publisher seeking OJS implementation and customization, I'm ready to transform your vision into scalable solutions.",
+    "email": "parmarhardip1995@gmail.com",
+    "linkedinUrl": "https://linkedin.com/in/parmarhardipr"
+  }
+}

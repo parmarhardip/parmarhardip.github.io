@@ -1,0 +1,32 @@
+{
+  "navigation": {
+    "logo": {
+      "text": "Hardip Parmar",
+      "icon": "M6 6H42L36 24L42 42H6L12 24L6 6Z"
+    },
+    "items": [
+      { "label": "Approach", "href": "#about" },
+      { "label": "Solutions", "href": "#expertise" },
+      { "label": "Case Studies", "href": "#portfolio" },
+      { "label": "Partners", "href": "#reviews" }
+    ],
+    "cta": {
+      "text": "Consult Now",
+      "href": "#contact"
+    }
+  },
+  "footer": {
+    "logo": {
+      "text": "Hardip Parmar",
+      "icon": "M6 6H42L36 24L42 42H6L12 24L6 6Z"
+    },
+    "copyright": "© 2024 Hardip Parmar. Architected for Scale & Innovation."
+  },
+  "seo": {
+    "defaultTitle": "Hardip Parmar | Senior WordPress Consultant & Engineering Partner",
+    "titleTemplate": "%s | Hardip Parmar",
+    "defaultDescription": "Senior WordPress consultant and engineering partner specializing in scalable LMS platforms, community sites, and enterprise solutions. 10+ years experience with BuddyBoss, LearnDash, and custom WordPress development.",
+    "siteUrl": "https://parmarhardip.github.io",
+    "defaultImage": "/assets/images/hardip-parmar.jpg"
+  }
+}
