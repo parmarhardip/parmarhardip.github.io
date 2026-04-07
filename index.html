@@ -1,493 +1,462 @@
 <!DOCTYPE html>
-<!-- upto 2 directory depth-->
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Super Folio</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&amp;display=swap"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&amp;display=swap" media="print" onload="this.media='all'"/>
-    <noscript>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&amp;display=swap"/>
-    </noscript>
-    <link href="./css/font-awesome/css/all.min.css?ver=1.2.0" rel="stylesheet">
-    <link href="./css/bootstrap-icons/bootstrap-icons.css?ver=1.2.0" rel="stylesheet">
-    <link href="./css/bootstrap.min.css?ver=1.2.0" rel="stylesheet">
-    <link href="./css/aos.css?ver=1.2.0" rel="stylesheet">
-    <link href="./css/main.css?ver=1.2.0" rel="stylesheet">
-    <noscript>
-      <style type="text/css">
-        [data-aos] {
-            opacity: 1 !important;
-            transform: translate(0) scale(1) !important;
+<html class="light scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hardip Parmar | Senior WordPress Consultant &amp; Engineering Partner</title>
+<meta name="description" content="Senior WordPress consultant and engineering partner specializing in scalable LMS platforms, community sites, and enterprise solutions. 10+ years experience with BuddyBoss, LearnDash, and custom WordPress development."/>
+<meta name="keywords" content="WordPress consultant, WordPress developer, BuddyBoss, LearnDash, LMS development, community platform, enterprise WordPress, PHP developer"/>
+<meta name="author" content="Hardip Parmar"/>
+
+<!-- Open Graph Meta Tags -->
+<meta property="og:title" content="Hardip Parmar | Senior WordPress Consultant & Engineering Partner"/>
+<meta property="og:description" content="Senior WordPress consultant specializing in scalable LMS platforms, community sites, and enterprise solutions. 10+ years experience with leading WordPress technologies."/>
+<meta property="og:image" content="assets/images/hardip-parmar.jpg"/>
+<meta property="og:url" content="https://parmarhardip.github.io"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Hardip Parmar Portfolio"/>
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Hardip Parmar | Senior WordPress Consultant & Engineering Partner"/>
+<meta name="twitter:description" content="Senior WordPress consultant specializing in scalable LMS platforms, community sites, and enterprise solutions."/>
+<meta name="twitter:image" content="assets/images/hardip-parmar.jpg"/>
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M6 6H42L36 24L42 42H6L12 24L6 6Z' fill='%235a6e5a'/%3E%3C/svg%3E"/>
+<link rel="alternate icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M6 6H42L36 24L42 42H6L12 24L6 6Z' fill='%235a6e5a'/%3E%3C/svg%3E"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                "background": "#fdfbf7","surface-container-lowest": "#ffffff",
+                "surface-container-low": "#f7f3ed","surface-container": "#f1ede6",
+                "surface-container-high": "#ebe6dd",
+                "primary": "#6c5a00",
+                "primary-container": "#ffd709",
+                "on-primary-container": "#453900",
+                "secondary": "#5a6e5a","secondary-container": "#e2ede2",
+                "on-secondary-container": "#1d2e1d",
+                "on-surface": "#2d2f2f",
+                "on-surface-variant": "#5a5c5c",
+                "outline-variant": "#d4d6d6",
+              },
+              "borderRadius": {
+                "DEFAULT": "1.25rem",
+                "lg": "2.5rem",
+                "xl": "4rem",
+                "full": "9999px"
+              },
+              "fontFamily": {
+                "headline": ["Manrope"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+              }
+            }
+          }
         }
-      </style>
-    </noscript>
-  </head>
-  <body id="top">
-    <header class="bg-light">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light" id="header-nav" role="navigation">
-        <div class="container"><a class="link-dark navbar-brand site-title mb-0" href="#">Super Folio</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto me-2">
-              <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-              <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-              <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-              <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-              <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-              <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <div class="page-content">
-      <div id="content">
-<header>
-  <div class="cover bg-light">
-    <div class="container px-3">
-      <div class="row">
-        <div class="col-lg-6 p-2"><img class="img-fluid" src="images/illustrations/hello3.svg" alt="hello"/></div>
-        <div class="col-lg-6">
-          <div class="mt-5">
-            <p class="lead text-uppercase mb-1">Hello!</p>
-            <h1 class="intro-title marker" data-aos="fade-left" data-aos-delay="50">I’m Hardip Parmar</h1>
-            <p class="lead fw-normal mt-3" data-aos="fade-up" data-aos-delay="100">WordPress Developer</p>
-            <div class="social-nav" data-aos="fade-up" data-aos-delay="200">
-              <nav role="navigation">
-                <ul class="nav justify-content-left">
-                  <li class="nav-item"><a class="nav-link" href="https://twitter.com/templateflip" title="Twitter"><i class="fab fa-twitter"></i><span class="menu-title sr-only">Twitter</span></a></li>
-                  <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/templateflip" title="Facebook"><i class="fab fa-facebook"></i><span class="menu-title sr-only">Facebook</span></a></li>
-                  <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/templateflip" title="Instagram"><i class="fab fa-instagram"></i><span class="menu-title sr-only">Instagram</span></a></li>
-                  <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/" title="LinkedIn"><i class="fab fa-linkedin"></i><span class="menu-title sr-only">LinkedIn</span></a></li>
-                  <li class="nav-item"><a class="nav-link" href="https://www.behance.net/templateflip" title="Behance"><i class="fab fa-behance"></i><span class="menu-title sr-only">Behance</span></a></li>
-                </ul>
-              </nav>
-            </div>
-            <div class="mt-3" data-aos="fade-up" data-aos-delay="200"><a class="btn btn-primary shadow-sm mt-1 hover-effect" href="#contact">Get In Touch <i class="fas fa-arrow-right"></i></a></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="wave-bg"></div>
+    </script>
+<style type="text/tailwindcss">
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .accent-underline {
+            background-image: linear-gradient(120deg, #ffd709 0%, #ffd709 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 0.25em;
+            background-position: 0 92%;
+        }
+        .organic-curve {
+            clip-path: ellipse(85% 100% at 50% 0%);
+        }
+        .consultant-card {
+            @apply bg-white p-10 rounded-lg border border-surface-container shadow-sm hover:shadow-xl hover:border-secondary/30 transition-all duration-500;
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface selection:bg-primary-container/40">
+<header class="sticky top-0 z-50 bg-background/90 backdrop-blur-lg border-b border-surface-container-high">
+<div class="max-w-[1200px] mx-auto px-6 py-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-8 text-secondary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M6 6H42L36 24L42 42H6L12 24L6 6Z" fill="currentColor"></path></svg>
+</div>
+<h2 class="text-on-surface text-xl font-extrabold tracking-tight font-headline">Hardip Parmar</h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-on-surface/70 text-sm font-semibold hover:text-secondary transition-colors" href="#about">Approach</a>
+<a class="text-on-surface/70 text-sm font-semibold hover:text-secondary transition-colors" href="#expertise">Solutions</a>
+<a class="text-on-surface/70 text-sm font-semibold hover:text-secondary transition-colors" href="#portfolio">Case Studies</a>
+<a class="text-on-surface/70 text-sm font-semibold hover:text-secondary transition-colors" href="#reviews">Partners</a>
+<a class="flex items-center justify-center rounded-full h-11 px-6 bg-secondary text-white text-sm font-bold hover:brightness-110 transition-all shadow-md" href="#contact">Consult Now</a>
+</nav>
+<button id="mobile-menu-button" class="md:hidden p-2 text-on-surface hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</div>
+<!-- Mobile Navigation Menu -->
+<div id="mobile-menu" class="md:hidden bg-background border-t border-surface-container-high hidden">
+<div class="px-6 py-4 space-y-3">
+<a class="block text-on-surface/70 font-semibold hover:text-secondary transition-colors py-2" href="#about">Approach</a>
+<a class="block text-on-surface/70 font-semibold hover:text-secondary transition-colors py-2" href="#expertise">Solutions</a>
+<a class="block text-on-surface/70 font-semibold hover:text-secondary transition-colors py-2" href="#portfolio">Case Studies</a>
+<a class="block text-on-surface/70 font-semibold hover:text-secondary transition-colors py-2" href="#reviews">Partners</a>
+<a class="block w-full text-center rounded-full py-3 px-6 bg-secondary text-white font-bold hover:brightness-110 transition-all shadow-md mt-4" href="#contact">Consult Now</a>
+</div>
+</div>
 </header>
-<div class="section pt-4 px-3 px-lg-4" id="about">
-  <div class="container-narrow">
-    <div class="row">
-      <div class="col-md-6">
-        <h2 class="h4 my-2">Hello! I’m Walter Patterson.</h2>
-        <p>I am passionate about UI/UX design and Web Design. I am a skilled front-end developer and master of graphic design tools such as Photoshop and Sketch. I am a quick learner and a team worker that gets the job done. I can easily capitalize on low hanging fruits and quickly maximize timely deliverables for real-time schemas.</p>
-        <div class="row mt-3">
-          <div class="col-sm-2">
-            <div class="pb-1">Age:</div>
-          </div>
-          <div class="col-sm-10">
-            <div class="pb-1 fw-bolder">28</div>
-          </div>
-          <div class="col-sm-2">
-            <div class="pb-1">Email:</div>
-          </div>
-          <div class="col-sm-10">
-            <div class="pb-1 fw-bolder">walter@company.com</div>
-          </div>
-          <div class="col-sm-2">
-            <div class="pb-1">Skype:</div>
-          </div>
-          <div class="col-sm-10">
-            <div class="pb-1 fw-bolder">username@skype.com</div>
-          </div>
-          <div class="col-sm-2">
-            <div class="pb-1">Phone:</div>
-          </div>
-          <div class="col-sm-10">
-            <div class="pb-1 fw-bolder">+0718-111-0011</div>
-          </div>
-          <div class="col-sm-2">
-            <div class="pb-1">Address:</div>
-          </div>
-          <div class="col-sm-10">
-            <div class="pb-1 fw-bolder">New Delhi, India</div>
-          </div>
-          <div class="col-sm-2">
-            <div class="pb-1">Staus:</div>
-          </div>
-          <div class="col-sm-10">
-            <div class="pb-1 fw-bolder">Available</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-5 offset-md-1" data-aos="fade-left" data-aos-delay="100"><img class="avatar img-fluid mt-2" src="images/avatar.jpg" width="400" height="400" alt="Walter Patterson"/></div>
-    </div>
-  </div>
+<section class="relative px-6 py-20 md:py-32 overflow-hidden" id="about">
+<div class="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+<div class="lg:col-span-7 flex flex-col gap-8 z-10">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<span class="w-10 h-[2px] bg-secondary"></span>
+<span class="text-secondary font-bold tracking-widest text-xs uppercase">Strategic Engineering Partner</span>
 </div>
-<div class="section px-3 px-lg-4 pt-5" id="services">
-  <div class="container-narrow">
-    <div class="text-center mb-5">
-      <h2 class="marker marker-center">My Services</h2>
-    </div>
-    <div class="text-center">
-      <p class="mx-auto mb-3" style="max-width:600px"> I offer services fit for any website or app. I can quickly maximize timely deliverables for real-time schemas.</p>
-    </div>
-    <div class="row py-3">
-      <div class="col-md-3 text-center" data-aos="fade-up" data-aos-delay="100"><img class="mb-2" src="images/services/web-design.svg" width="96" height="96" alt="web design"/>
-        <div class="h5">Web Design</div>
-      </div>
-      <div class="col-md-3 text-center" data-aos="fade-up" data-aos-delay="200"><img class="mb-2" src="images/services/graphic-design.svg" width="96" height="96" alt="graphic design"/>
-        <div class="h5">Graphic Design</div>
-      </div>
-      <div class="col-md-3 text-center" data-aos="fade-up" data-aos-delay="300"><img class="mb-2" src="images/services/ui-ux.svg" width="96" height="96" alt="ui-ux"/>
-        <div class="h5">UI/UX</div>
-      </div>
-      <div class="col-md-3 text-center" data-aos="fade-up" data-aos-delay="400"><img class="mb-2" src="images/services/app-development.svg" width="96" height="96" alt="app development"/>
-        <div class="h5">App Development</div>
-      </div>
-    </div>
-  </div>
+<h1 class="text-on-surface text-5xl md:text-7xl font-extrabold leading-[1.1] tracking-tight font-headline">
+                    Transforming Vision into <span class="accent-underline">Scalable WordPress</span> Solutions.
+                </h1>
 </div>
-<div class="section px-3 px-lg-4 pt-5" id="skills">
-  <div class="container-narrow">
-    <div class="text-center mb-5">
-      <h2 class="marker marker-center">My Skills</h2>
-    </div>
-    <div class="text-center">
-      <p class="mx-auto mb-3" style="max-width:600px">I am a quick learner and specialize in multitude of skills required for Web Application Development and Product Design</p>
-    </div>
-    <div class="bg-light p-3">
-      <div class="row">
-        <div class="col-md-5">
-          <div class="py-1">
-            <div class="d-flex text-small fw-bolder"><span class="me-auto">HTML5</span><span>90%</span></div>
-            <div class="progress my-1">
-              <div class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="100" data-aos-anchor=".skills-section" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-          <div class="py-1">
-            <div class="d-flex text-small fw-bolder"><span class="me-auto">CSS3</span><span>90%</span></div>
-            <div class="progress my-1">
-              <div class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="200" data-aos-anchor=".skills-section" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-          <div class="py-1">
-            <div class="d-flex text-small fw-bolder"><span class="me-auto">JavaScript</span><span>80%</span></div>
-            <div class="progress my-1">
-              <div class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="300" data-aos-anchor=".skills-section" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-          <div class="py-1">
-            <div class="d-flex text-small fw-bolder"><span class="me-auto">React</span><span>75%</span></div>
-            <div class="progress my-1">
-              <div class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="300" data-aos-anchor=".skills-section" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-5 offset-md-2">
-          <div class="py-1">
-            <div class="d-flex text-small fw-bolder"><span class="me-auto">PHP</span><span>70%</span></div>
-            <div class="progress my-1">
-              <div class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="400" data-aos-anchor=".skills-section" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-          <div class="py-1">
-            <div class="d-flex text-small fw-bolder"><span class="me-auto">WordPress</span><span>70%</span></div>
-            <div class="progress my-1">
-              <div class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="500" data-aos-anchor=".skills-section" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-          <div class="py-1">
-            <div class="d-flex text-small fw-bolder"><span class="me-auto">MySQL</span><span>60%</span></div>
-            <div class="progress my-1">
-              <div class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="600" data-aos-anchor=".skills-section" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-          <div class="py-1">
-            <div class="d-flex text-small fw-bolder"><span class="me-auto">Photoshop</span><span>60%</span></div>
-            <div class="progress my-1">
-              <div class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="600" data-aos-anchor=".skills-section" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<p class="text-on-surface-variant text-xl leading-relaxed max-w-2xl">
+                I partner with digital agencies and enterprise teams to architect high-performance WordPress ecosystems. From complex LMS platforms to niche OJS academic workflows, I build technical foundations that empower your growth.
+            </p>
+<div class="flex flex-wrap gap-5 pt-4">
+<a class="px-10 py-3 bg-primary-container text-on-primary-container rounded-full font-bold shadow-lg hover:shadow-xl hover:translate-y-[-2px] transition-all flex items-center gap-3 justify-center text-lg" href="#contact">
+                    Let's Collaborate <span class="material-symbols-outlined">handshake</span>
+</a>
+<a class="px-10 py-3 bg-white text-secondary rounded-full font-bold border-2 border-secondary/10 hover:border-secondary/30 transition-all text-center text-lg" href="#portfolio">View Portfolio</a>
 </div>
-<div class="section px-2 px-lg-4 pt-5" id="portfolio">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="marker marker-center">Portfolio </h2>
-    </div>
-    <div class="grid bp-gallery pb-3" data-aos="zoom-in-up" data-aos-delay="100">
-      <div class="grid-sizer"></div>
-      <div class="grid-item"><a href="https://dribbble.com">
-          <figure class="portfolio-item"><img src="images/portfolio/1-small.png" data-bp="images/portfolio/1.jpg"/>
-            <figcaption>
-              <h4 class="h5 mb-0">Web Design</h4>
-              <div>Dribbble.com</div>
-            </figcaption>
-          </figure></a></div>
-      <div class="grid-item"><a href="https://github.com">
-          <figure class="portfolio-item"><img src="images/portfolio/2-small.png" data-bp="images/portfolio/2.jpg" data-caption="Example of an optional caption."/>
-            <figcaption> 
-              <h4 class="h5 mb-0">Web Development</h4>
-              <div>GitHub.com</div>
-            </figcaption>
-          </figure></a></div>
-      <div class="grid-item"><a href="https://soundcloud.com/">
-          <figure class="portfolio-item"><img src="images/portfolio/3-small.png" data-bp="images/portfolio/3.jpg" data-caption="Example of an optional caption."/>
-            <figcaption> 
-              <h4 class="h5 mb-0">Audio Mixing</h4>
-              <div>Soundcloud.com</div>
-            </figcaption>
-          </figure></a></div>
-      <div class="grid-item"><a href="https://www.adobe.com/">
-          <figure class="portfolio-item"><img src="images/portfolio/4-small.png" data-bp="images/portfolio/4.jpg"/>
-            <figcaption>
-              <h4 class="h5 mb-0">Video Editing</h4>
-              <div>Adobe After Effects</div>
-            </figcaption>
-          </figure></a></div>
-      <div class="grid-item"><a href="https://www.adobe.com/">
-          <figure class="portfolio-item"><img src="images/portfolio/5-small.png" data-bp="images/portfolio/5.jpg"/>
-            <figcaption>
-              <h4 class="h5 mb-0">Photography</h4>
-              <div>Adobe Photoshop</div>
-            </figcaption>
-          </figure></a></div>
-      <div class="grid-item"><a href="https://www.android.com/">
-          <figure class="portfolio-item"><img src="images/portfolio/6-small.png" data-bp="images/portfolio/6.jpg"/>
-            <figcaption>
-              <h4 class="h5 mb-0">App Development</h4>
-              <div>Android</div>
-            </figcaption>
-          </figure></a></div>
-      <div class="grid-item"><a href="https://flutter.dev/">
-          <figure class="portfolio-item"><img src="images/portfolio/7-small.png" data-bp="images/portfolio/7.jpg"/>
-            <figcaption>
-              <h4 class="h5 mb-0">App Design</h4>
-              <div>Flutter</div>
-            </figcaption>
-          </figure></a></div>
-      <div class="grid-item"><a href="https://flutter.dev/">
-          <figure class="portfolio-item"><img src="images/portfolio/8-small.png" data-bp="images/portfolio/8.jpg"/>
-            <figcaption>
-              <h4 class="h5 mb-0">App Development</h4>
-              <div>Flutter</div>
-            </figcaption>
-          </figure></a></div>
-    </div>
-  </div>
 </div>
-<div class="section px-3 px-lg-4 pt-5" id="experience">
-  <div class="container-narrow">
-    <div class="text-center mb-5">
-      <h2 class="marker marker-center">Experience</h2>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="card mb-3" data-aos="fade-right" data-aos-delay="100">
-          <div class="card-header px-3 py-2">
-            <div class="d-flex justify-content-between">
-              <div>
-                <h3 class="h5 mb-1">UI/UX Design</h3>
-                <div class="text-muted text-small">Designerr Inc. <small>(2012-2014)</small></div>
-              </div><img src="images/services/ui-ux.svg" width="48" height="48" alt="ui-ux"/>
-            </div>
-          </div>
-          <div class="card-body px-3 py-2">
-            <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
-            <p>Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card mb-3" data-aos="fade-left" data-aos-delay="300">
-          <div class="card-header px-3 py-2">
-            <div class="d-flex justify-content-between">
-              <div>
-                <h3 class="h5 mb-1">App Development</h3>
-                <div class="text-muted text-small">MakeMyApp LLC. <small>(2015-2018)</small></div>
-              </div><img src="images/services/app-development.svg" width="48" height="48" alt="app development"/>
-            </div>
-          </div>
-          <div class="card-body px-3 py-2">
-            <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
-            <p>Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card mb-3" data-aos="fade-right" data-aos-delay="200">
-          <div class="card-header px-3 py-2">
-            <div class="d-flex justify-content-between">
-              <div>
-                <h3 class="h5 mb-1">Web Design</h3>
-                <div class="text-muted text-small">Webbie LLC. <small>(2018-2020)</small></div>
-              </div><img src="images/services/web-design.svg" width="48" height="48" alt="web design"/>
-            </div>
-          </div>
-          <div class="card-body px-3 py-2">
-            <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
-            <p>Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card mb-3" data-aos="fade-left" data-aos-delay="400">
-          <div class="card-header px-3 py-2">
-            <div class="d-flex justify-content-between">
-              <div>
-                <h3 class="h5 mb-1">Full Stack Development</h3>
-                <div class="text-muted text-small">Coder Inc. <small>(2020-2021)</small></div>
-              </div><img src="images/services/full-stack.svg" width="48" height="48" alt="full stack"/>
-            </div>
-          </div>
-          <div class="card-body px-3 py-2">
-            <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
-            <p>Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="lg:col-span-5 relative">
+<div class="absolute -top-10 -left-10 w-72 h-72 bg-secondary/10 rounded-full blur-3xl"></div>
+<div class="relative rounded-2xl overflow-hidden shadow-2xl p-3 bg-white rotate-2 hover:rotate-0 transition-transform duration-700">
+<img alt="Hardip Parmar" class="w-full aspect-[4/5] object-cover rounded-xl" src="assets/images/hardip-parmar.jpg"/>
 </div>
-<div class="section px-3 px-lg-4 pt-5" id="testimonials">
-  <div class="container-narrow">
-    <div class="text-center mb-5">
-      <h2 class="marker marker-center">Client Testimonials</h2>
-    </div>
-    <div class="row"> 
-      <div class="col-md-6 mb-5" data-aos="fade-right" data-aos-delay="100">
-        <div class="d-flex ms-md-3"><span><i class="fas fa-2x fa-quote-left"></i></span><span class="m-2">Walter displays exemplary professionalism and is able to take on challenges. He learns quickly and is an asset to any team.</span></div>
-        <div class="d-flex justify-content-end align-items-end">
-          <div class="text-end me-2">
-            <div class="fw-bolder">Aiyana</div>
-            <div class="text-small">CEO / Web Design Company</div>
-          </div><img class="me-md-3 rounded" src="images/testimonials/client1.jpg" width="96" height="96" alt="client 1"/>
-        </div>
-      </div>
-      <div class="col-md-6 mb-5" data-aos="fade-left" data-aos-delay="300">
-        <div class="d-flex ms-md-3"><span><i class="fas fa-2x fa-quote-left"></i></span><span class="m-2">Walter displays exemplary professionalism and is able to take on challenges. He learns quickly and is an asset to any team.</span></div>
-        <div class="d-flex justify-content-end align-items-end">
-          <div class="text-end me-2">
-            <div class="fw-bolder">Alexander</div>
-            <div class="text-small">CEO / Web Design Company</div>
-          </div><img class="me-md-3 rounded" src="images/testimonials/client2.jpg" width="96" height="96" alt="client 1"/>
-        </div>
-      </div>
-      <div class="col-md-6 mb-5" data-aos="fade-right" data-aos-delay="200">
-        <div class="d-flex ms-md-3"><span><i class="fas fa-2x fa-quote-left"></i></span><span class="m-2">Walter is a great co-worker and problem solver. He is quick to extend his helping hand and makes a good team player.</span></div>
-        <div class="d-flex justify-content-end align-items-end">
-          <div class="text-end me-2">
-            <div class="fw-bolder">Ariya</div>
-            <div class="text-small">Web Developer</div>
-          </div><img class="me-md-3 rounded" src="images/testimonials/client3.jpg" width="96" height="96" alt="client 1"/>
-        </div>
-      </div>
-      <div class="col-md-6 mb-5" data-aos="fade-left" data-aos-delay="400">
-        <div class="d-flex ms-md-3"><span><i class="fas fa-2x fa-quote-left"></i></span><span class="m-2">Walter is a great co-worker and problem solver. He is quick to extend his helping hand and makes a good team player.</span></div>
-        <div class="d-flex justify-content-end align-items-end">
-          <div class="text-end me-2">
-            <div class="fw-bolder">Braiden</div>
-            <div class="text-small">Web Designer</div>
-          </div><img class="me-md-3 rounded" src="images/testimonials/client4.jpg" width="96" height="96" alt="client 1"/>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
-<div class="section px-2 px-lg-4 pb-4 pt-5 mb-5" id="contact">
-  <div class="container-narrow">
-    <div class="text-center mb-5">
-      <h2 class="marker marker-center">Contact Me</h2>
-    </div>
-    <div class="row">
-      <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
-        <div class="bg-light my-2 p-3 pt-2"><form action="https://formspree.io/your@email.com"
-    method="POST">
-    <div class="form-group my-2">
-      <label for="name" class="form-label fw-bolder">Name</label>
-      <input class="form-control" type="text" id="name" name="name" required>
-    </div>
-    <div class="form-group my-2">
-      <label for="email" class="form-label fw-bolder">Email</label>
-      <input class="form-control" type="email" id="email" name="_replyto" required>
-    </div>
-  <div class="form-group my-2">
-    <label for="message" class="form-label fw-bolder">Message</label>
-    <textarea class="form-control" style="resize: none;" id="message" name="message" rows="4" required></textarea>
-  </div>
-  <button class="btn btn-primary mt-2" type="submit">Send</button>
-</form>
-        </div>
-      </div>
-      <div class="col-md-6" data-aos="fade-left" data-aos-delay="300">
-        <div class="mt-3 px-1">
-          <div class="h5">Let’s talk how I can help you!</div>
-          <p>If you like my work and want to avail my services then drop me a message using the contact form. </p>
-          <p>Or get in touch using my email, skype or my contact number.</p>
-          <p>See you!</p>
-        </div>
-        <div class="mt-53 px-1">
-          <div class="row"> 
-            <div class="col-sm-2">
-              <div class="pb-1">Email:</div>
-            </div>
-            <div class="col-sm-10">
-              <div class="pb-1 fw-bolder">walter@company.com</div>
-            </div>
-            <div class="col-sm-2">
-              <div class="pb-1">Skype:</div>
-            </div>
-            <div class="col-sm-10">
-              <div class="pb-1 fw-bolder">username@skype.com</div>
-            </div>
-            <div class="col-sm-2">
-              <div class="pb-1">Phone:</div>
-            </div>
-            <div class="col-sm-10">
-              <div class="pb-1 fw-bolder">+0718-111-0011</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
-<footer class="pt-4 pb-4 text-center bg-light">
-  <div class="container">
-    <div class="my-3">
-      <div class="h4">Walter Patterson</div>
-      <p>Web Developer & Mobile Application Developer</p>
-      <div class="social-nav">
-        <nav role="navigation">
-          <ul class="nav justify-content-center">
-            <li class="nav-item"><a class="nav-link" href="https://twitter.com/templateflip" title="Twitter"><i class="fab fa-twitter"></i><span class="menu-title sr-only">Twitter</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/templateflip" title="Facebook"><i class="fab fa-facebook"></i><span class="menu-title sr-only">Facebook</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/templateflip" title="Instagram"><i class="fab fa-instagram"></i><span class="menu-title sr-only">Instagram</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/" title="LinkedIn"><i class="fab fa-linkedin"></i><span class="menu-title sr-only">LinkedIn</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="https://www.behance.net/templateflip" title="Behance"><i class="fab fa-behance"></i><span class="menu-title sr-only">Behance</span></a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-    <div class="text-small text-secondary">
-      <div class="mb-1">&copy; Super Folio. All rights reserved.</div>
-      <div>
-        <!-- Make sure to buy a license for the template before removing the line below. Buy license on https://templateflip.com/ -->Design - <a href="https://templateflip.com/" target="_blank">TemplateFlip</a></div>
-    </div>
-  </div>
-</footer></div>
-    </div>
-    <div id="scrolltop"><a class="btn btn-secondary" href="#top"><span class="icon"><i class="fas fa-angle-up fa-x"></i></span></a></div>
-    <script src="./scripts/imagesloaded.pkgd.min.js?ver=1.2.0"></script>
-    <script src="./scripts/masonry.pkgd.min.js?ver=1.2.0"></script>
-    <script src="./scripts/BigPicture.min.js?ver=1.2.0"></script>
-    <script src="./scripts/purecounter.min.js?ver=1.2.0"></script>
-    <script src="./scripts/bootstrap.bundle.min.js?ver=1.2.0"></script>
-    <script src="./scripts/aos.min.js?ver=1.2.0"></script>
-    <script src="./scripts/main.js?ver=1.2.0"></script>
-  </body>
-</html>
+</section>
+<section class="bg-surface-container-low py-28 px-6" id="expertise">
+<div class="max-w-[1200px] mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-24 items-center">
+<div class="lg:col-span-6">
+<h2 class="text-on-surface text-4xl font-extrabold mb-6 font-headline leading-tight">A Consultative Approach to <br/><span class="text-secondary">Engineering Excellence</span></h2>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-8">
+                    My decade of experience at the heart of industry-leading products like BuddyBoss has taught me that the best solutions are collaborative. I don't just write code; I act as a technical extension of your team, identifying bottlenecks before they appear and architecting for the long term.
+                </p>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<span class="text-secondary text-4xl font-extrabold block mb-1">10+</span>
+<p class="text-on-surface-variant font-medium text-sm">Years of Strategic Development</p>
+</div>
+<div>
+<span class="text-secondary text-4xl font-extrabold block mb-1">50+</span>
+<p class="text-on-surface-variant font-medium text-sm">Agency Partnerships</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-6 space-y-4">
+<div class="flex items-start gap-6 p-8 rounded-2xl bg-white shadow-sm border border-surface-container">
+<div class="p-3 bg-secondary/10 rounded-xl text-secondary">
+<span class="material-symbols-outlined text-3xl">lightbulb</span>
+</div>
+<div>
+<p class="font-bold text-lg text-on-surface mb-1">Innovative Solutions</p>
+<p class="text-on-surface-variant">Translating complex business requirements into elegant, high-performing technical roadmaps.</p>
+</div>
+</div>
+<div class="flex items-start gap-6 p-8 rounded-2xl bg-white shadow-sm border border-surface-container">
+<div class="p-3 bg-primary-container/20 rounded-xl text-primary">
+<span class="material-symbols-outlined text-3xl">hub</span>
+</div>
+<div>
+<p class="font-bold text-lg text-on-surface mb-1">Architectural Stability</p>
+<p class="text-on-surface-variant">Building robust frameworks that support millions of users with rock-solid security and speed.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center mb-16">
+<h3 class="text-3xl font-extrabold font-headline">Technical Solutions Core</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+<div class="consultant-card border-t-4 border-t-primary">
+<span class="material-symbols-outlined text-primary text-5xl mb-6 block">code_blocks</span>
+<h3 class="text-2xl font-bold mb-4 text-on-surface">WordPress Engineering</h3>
+<p class="text-on-surface-variant leading-relaxed">Advanced plugin development and core architectural enhancements using modern PHP patterns and REST APIs.</p>
+</div>
+<div class="consultant-card border-t-4 border-t-secondary">
+<span class="material-symbols-outlined text-secondary text-5xl mb-6 block">groups</span>
+<h3 class="text-2xl font-bold mb-4 text-on-surface">Community &amp; LMS</h3>
+<p class="text-on-surface-variant leading-relaxed">Deep integration expertise with LearnDash and BuddyBoss to create engaging, high-traffic learning platforms.</p>
+</div>
+<div class="consultant-card border-t-4 border-t-primary">
+<span class="material-symbols-outlined text-primary text-5xl mb-6 block">menu_book</span>
+<h3 class="text-2xl font-bold mb-4 text-on-surface">Academic Systems</h3>
+<p class="text-on-surface-variant leading-relaxed">Specialized OJS (Open Journal Systems) implementations, editorial workflows, and journal submission management.</p>
+</div>
+<div class="consultant-card">
+<span class="material-symbols-outlined text-secondary text-5xl mb-6 block">speed</span>
+<h3 class="text-2xl font-bold mb-4 text-on-surface">Performance Strategy</h3>
+<p class="text-on-surface-variant leading-relaxed">Deep-level query profiling, object caching, and database tuning to ensure millisecond response times.</p>
+</div>
+<div class="consultant-card">
+<span class="material-symbols-outlined text-primary text-5xl mb-6 block">api</span>
+<h3 class="text-2xl font-bold mb-4 text-on-surface">Custom Integrations</h3>
+<p class="text-on-surface-variant leading-relaxed">Bridging WordPress with mobile applications, external CRMs, and complex third-party data ecosystems.</p>
+</div>
+<div class="consultant-card">
+<span class="material-symbols-outlined text-secondary text-5xl mb-6 block">verified_user</span>
+<h3 class="text-2xl font-bold mb-4 text-on-surface">System Integrity</h3>
+<p class="text-on-surface-variant leading-relaxed">Comprehensive security audits and hardening for mission-critical enterprise applications.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-28 px-6 bg-background" id="career">
+<div class="max-w-[1000px] mx-auto">
+<div class="text-center mb-20">
+<h2 class="text-on-surface text-4xl font-extrabold mb-4 font-headline">Professional Journey</h2>
+<div class="w-24 h-1.5 bg-secondary/20 mx-auto rounded-full"></div>
+</div>
+<div class="space-y-12">
+<div class="group relative pl-12 border-l-2 border-surface-container-high pb-4">
+<div class="absolute left-[-9px] top-0 w-4 h-4 bg-secondary rounded-full border-4 border-background group-hover:scale-125 transition-transform"></div>
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+<h3 class="text-2xl font-bold text-on-surface font-headline">Lead Developer @ BuddyBoss</h3>
+<span class="px-4 py-1 bg-secondary-container text-on-secondary-container text-xs font-bold rounded-full">2021 — PRESENT</span>
+</div>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-3xl">
+                    Spearheading core architecture for the world’s leading community platform. Leading cross-functional teams to deliver enterprise-grade features used by thousands of global organizations.
+                </p>
+</div>
+<div class="group relative pl-12 border-l-2 border-surface-container-high pb-4">
+<div class="absolute left-[-9px] top-0 w-4 h-4 bg-surface-container-high rounded-full border-4 border-background group-hover:bg-secondary transition-colors"></div>
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+<h3 class="text-2xl font-bold text-on-surface font-headline">Senior Web Developer @ BuddyBoss</h3>
+<span class="px-4 py-1 bg-surface-container-high text-on-surface-variant text-xs font-bold rounded-full">2018 — 2021</span>
+</div>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-3xl">
+                    Engineered modular theme components and complex API integrations that defined the next generation of social networking on WordPress.
+                </p>
+</div>
+<div class="group relative pl-12 border-l-2 border-surface-container-high pb-4">
+<div class="absolute left-[-9px] top-0 w-4 h-4 bg-surface-container-high rounded-full border-4 border-background group-hover:bg-secondary transition-colors"></div>
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+<h3 class="text-2xl font-bold text-on-surface font-headline">WordPress Developer @ Multidots</h3>
+<span class="px-4 py-1 bg-surface-container-high text-on-surface-variant text-xs font-bold rounded-full">2014 — 2018</span>
+</div>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-3xl">
+                    Delivered tailored technical solutions for high-profile enterprise clients, focusing on scalability and user-centric design.
+                </p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 bg-surface-container-low" id="toolkit">
+<div class="max-w-[900px] mx-auto text-center">
+<h2 class="text-on-surface text-3xl font-extrabold mb-10 font-headline">The Technical Toolkit</h2>
+<div class="flex flex-wrap justify-center gap-3">
+<span class="px-6 py-2 bg-white text-on-surface-variant font-semibold rounded-full border border-surface-container hover:border-secondary hover:text-secondary transition-all cursor-default shadow-sm">PHP</span>
+<span class="px-6 py-2 bg-white text-on-surface-variant font-semibold rounded-full border border-surface-container hover:border-secondary hover:text-secondary transition-all cursor-default shadow-sm">WordPress</span>
+<span class="px-6 py-2 bg-white text-on-surface-variant font-semibold rounded-full border border-surface-container hover:border-secondary hover:text-secondary transition-all cursor-default shadow-sm">JavaScript</span>
+<span class="px-6 py-2 bg-white text-on-surface-variant font-semibold rounded-full border border-surface-container hover:border-secondary hover:text-secondary transition-all cursor-default shadow-sm">REST APIs</span>
+<span class="px-6 py-2 bg-white text-on-surface-variant font-semibold rounded-full border border-surface-container hover:border-secondary hover:text-secondary transition-all cursor-default shadow-sm">MySQL</span>
+<span class="px-6 py-2 bg-white text-on-surface-variant font-semibold rounded-full border border-surface-container hover:border-secondary hover:text-secondary transition-all cursor-default shadow-sm">Docker</span>
+<span class="px-6 py-2 bg-white text-on-surface-variant font-semibold rounded-full border border-surface-container hover:border-secondary hover:text-secondary transition-all cursor-default shadow-sm">Git</span>
+<span class="px-6 py-2 bg-white text-on-surface-variant font-semibold rounded-full border border-surface-container hover:border-secondary hover:text-secondary transition-all cursor-default shadow-sm">LearnDash</span>
+<span class="px-6 py-2 bg-white text-on-surface-variant font-semibold rounded-full border border-surface-container hover:border-secondary hover:text-secondary transition-all cursor-default shadow-sm">BuddyBoss</span>
+<span class="px-6 py-2 bg-white text-on-surface-variant font-semibold rounded-full border border-surface-container hover:border-secondary hover:text-secondary transition-all cursor-default shadow-sm">TutorLMS</span>
+<span class="px-6 py-2 bg-white text-on-surface-variant font-semibold rounded-full border border-surface-container hover:border-secondary hover:text-secondary transition-all cursor-default shadow-sm">MemberPress</span>
+<span class="px-6 py-2 bg-white text-on-surface-variant font-semibold rounded-full border border-surface-container hover:border-secondary hover:text-secondary transition-all cursor-default shadow-sm">GamiPress</span>
+<span class="px-6 py-2 bg-white text-on-surface-variant font-semibold rounded-full border border-secondary text-secondary transition-all cursor-default shadow-sm">OJS</span>
+<span class="px-6 py-2 bg-white text-on-surface-variant font-semibold rounded-full border border-secondary text-secondary transition-all cursor-default shadow-sm">Academic Systems</span>
+</div>
+</div>
+</section>
+<section class="py-28 px-6 bg-background" id="portfolio">
+<div class="max-w-[1200px] mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+<div class="max-w-2xl">
+<h2 class="text-on-surface text-4xl font-extrabold mb-4 font-headline">Selected Impact</h2>
+<p class="text-on-surface-variant text-lg">Tangible engineering solutions for complex digital challenges.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+<div class="group bg-white rounded-2xl overflow-hidden border border-surface-container-high hover:shadow-2xl transition-all duration-500">
+<div class="overflow-hidden">
+<img alt="Scalable LMS" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700" src="assets/images/lms-platform.jpg" loading="lazy"/>
+</div>
+<div class="p-8">
+<h3 class="text-xl font-extrabold mb-3 text-on-surface">High-Performance LMS</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Built a learning environment supporting 500k+ concurrent users with enterprise-grade stability.</p>
+<span class="text-secondary/60 font-bold text-xs uppercase tracking-widest flex items-center gap-2">
+                        Case Study <span class="text-secondary/40">Coming Soon</span>
+</span>
+</div>
+</div>
+<div class="group bg-white rounded-2xl overflow-hidden border border-surface-container-high hover:shadow-2xl transition-all duration-500">
+<div class="overflow-hidden">
+<img alt="App Automation" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700" src="assets/images/app-automation.jpg" loading="lazy"/>
+</div>
+<div class="p-8">
+<h3 class="text-xl font-extrabold mb-3 text-on-surface">App Eco-Automation</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Automated delivery pipelines for mobile ecosystems powered by WordPress REST API.</p>
+<span class="text-secondary/60 font-bold text-xs uppercase tracking-widest flex items-center gap-2">
+                        Case Study <span class="text-secondary/40">Coming Soon</span>
+</span>
+</div>
+</div>
+<div class="group bg-white rounded-2xl overflow-hidden border border-surface-container-high hover:shadow-2xl transition-all duration-500">
+<div class="overflow-hidden">
+<img alt="Plugin Architecture" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700" src="assets/images/plugin-architecture.jpg" loading="lazy"/>
+</div>
+<div class="p-8">
+<h3 class="text-xl font-extrabold mb-3 text-on-surface">Modular Frameworks</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Engineered scalable plugin architecture adopted by multiple enterprise clients for rapid development.</p>
+<span class="text-secondary/60 font-bold text-xs uppercase tracking-widest flex items-center gap-2">
+                        Case Study <span class="text-secondary/40">Coming Soon</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-28 px-6 bg-surface-container-low" id="reviews">
+<div class="max-w-[1200px] mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-on-surface text-4xl font-extrabold mb-4 font-headline">Peer Reviews</h2>
+<p class="text-on-surface-variant text-lg">What industry partners say about our engineering collaboration.</p>
+</div>
+<div class="relative group">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+<div class="bg-white p-10 rounded-2xl shadow-sm border border-surface-container hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="text-primary-container mb-6 flex">
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+</div>
+<p class="text-on-surface italic text-lg leading-relaxed mb-8">
+                            "Hardip is an exceptional architect who understands both the technical depth of WordPress and the business needs of a growing platform. His work on BuddyBoss core was instrumental to our success."
+                        </p>
+</div>
+<div class="flex items-center gap-4 border-t border-surface-container pt-6">
+<div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Chief Product Officer</p>
+<p class="text-on-surface-variant text-sm">Leading SaaS Platform</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-10 rounded-2xl shadow-sm border border-surface-container hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="text-primary-container mb-6 flex">
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+</div>
+<p class="text-on-surface italic text-lg leading-relaxed mb-8">
+                            "When it comes to LMS scalability, Hardip is my go-to engineer. He transformed our fragmented plugin setup into a cohesive, lightning-fast ecosystem that serves thousands of students daily."
+                        </p>
+</div>
+<div class="flex items-center gap-4 border-t border-surface-container pt-6">
+<div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Founder</p>
+<p class="text-on-surface-variant text-sm">Global EdTech Startup</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-center gap-2 mt-12">
+<button class="w-3 h-3 rounded-full bg-secondary"></button>
+<button class="w-3 h-3 rounded-full bg-surface-container-high hover:bg-secondary/40 transition-colors"></button>
+<button class="w-3 h-3 rounded-full bg-surface-container-high hover:bg-secondary/40 transition-colors"></button>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 px-6 bg-background relative overflow-hidden" id="contact">
+<div class="absolute top-0 left-0 w-full h-24 bg-surface-container-low organic-curve"></div>
+<div class="max-w-[850px] mx-auto text-center flex flex-col gap-10 relative z-10">
+<div class="flex flex-col gap-4 pt-12">
+<span class="text-secondary font-bold tracking-[0.4em] text-sm uppercase">READY TO COLLABORATE?</span>
+<h2 class="text-on-surface text-5xl md:text-6xl font-extrabold font-headline leading-[1.1]">Let’s Build Your <br/><span class="accent-underline">Next Innovative Platform</span></h2>
+</div>
+<p class="text-on-surface-variant text-xl leading-relaxed max-w-2xl mx-auto">
+            Whether you’re an agency needing high-level WordPress consulting or a publisher seeking to modernize your OJS workflow, I’m ready to engineer your vision.
+        </p>
+<div class="flex flex-wrap justify-center gap-6 pt-6">
+<a class="flex items-center gap-4 bg-secondary text-white px-12 py-3 rounded-full font-extrabold text-xl shadow-xl hover:shadow-2xl hover:brightness-110 active:scale-95 transition-all" href="mailto:contact@hardipparmar.com">
+<span class="material-symbols-outlined">rocket_launch</span>
+                Start the Conversation
+            </a>
+<a class="flex items-center gap-4 bg-white text-on-surface px-12 py-3 rounded-full font-bold text-xl border border-surface-container hover:border-secondary transition-all shadow-sm" href="https://linkedin.com/in/hardipparmar" target="_blank" rel="noopener">
+<span class="material-symbols-outlined">link</span>
+                LinkedIn
+            </a>
+</div>
+</div>
+</section>
+<footer class="py-16 px-6 bg-background border-t border-surface-container-high text-center">
+<div class="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="flex items-center gap-3">
+<div class="size-6 text-secondary/50">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M6 6H42L36 24L42 42H6L12 24L6 6Z" fill="currentColor"></path></svg>
+</div>
+<p class="text-on-surface-variant text-sm font-bold font-headline uppercase tracking-widest">Hardip Parmar</p>
+</div>
+<p class="text-on-surface-variant text-sm">
+            © 2024 Hardip Parmar. Architected for Scale &amp; Innovation.
+        </p>
+</div>
+</footer>
+
+<script>
+// Mobile menu toggle
+document.getElementById('mobile-menu-button').addEventListener('click', function() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = this.querySelector('span');
+
+    mobileMenu.classList.toggle('hidden');
+    menuIcon.textContent = mobileMenu.classList.contains('hidden') ? 'menu' : 'close';
+});
+
+// Close mobile menu when clicking on links
+document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', function() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.querySelector('#mobile-menu-button span');
+
+        mobileMenu.classList.add('hidden');
+        menuIcon.textContent = 'menu';
+    });
+});
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+</script>
+</body></html>
