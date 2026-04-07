@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html class="light scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Scalable LMS &amp; Community Ecosystem | Hardip Parmar - Case Study</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                "background": "#fdfbf7",
+                "surface-container-lowest": "#ffffff",
+                "surface-container-low": "#f7f3ed",
+                "surface-container": "#f1ede6",
+                "surface-container-high": "#ebe6dd",
+                "primary": "#6c5a00",
+                "primary-container": "#FFD700",
+                "on-primary-container": "#453900",
+                "secondary": "#5a6e5a",
+                "secondary-container": "#e2ede2",
+                "on-secondary-container": "#1d2e1d",
+                "on-surface": "#2d2f2f",
+                "on-surface-variant": "#5a5c5c",
+                "outline-variant": "#d4d6d6",
+              },
+              "borderRadius": {
+                "DEFAULT": "1.25rem",
+                "lg": "2.5rem",
+                "xl": "4rem",
+                "full": "9999px"
+              },
+              "fontFamily": {
+                "headline": ["Manrope"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+              }
+            }
+          }
+        }
+    </script>
+<style type="text/tailwindcss">
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .accent-underline {
+            background-image: linear-gradient(120deg, #FFD700 0%, #FFD700 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 0.25em;
+            background-position: 0 92%;
+        }
+        .organic-curve {
+            clip-path: ellipse(85% 100% at 50% 0%);
+        }
+        .consultant-card {
+            @apply bg-white p-10 rounded-lg border border-surface-container shadow-sm hover:shadow-xl hover:border-secondary/30 transition-all duration-500;
+        }
+        .glass-nav { background: rgba(253, 251, 247, 0.9); backdrop-filter: blur(10px); }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface selection:bg-primary-container/40">
+<header class="sticky top-0 z-50 glass-nav border-b border-surface-container-high">
+<div class="max-w-[1200px] mx-auto px-6 py-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-8 text-secondary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M6 6H42L36 24L42 42H6L12 24L6 6Z" fill="currentColor"></path></svg>
+</div>
+<h2 class="text-on-surface text-xl font-extrabold tracking-tight font-headline">Hardip Parmar</h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-on-surface/70 text-sm font-semibold hover:text-secondary transition-colors" href="/#about">Approach</a>
+<a class="text-on-surface/70 text-sm font-semibold hover:text-secondary transition-colors" href="/#expertise">Solutions</a>
+<a class="text-on-surface/70 text-sm font-semibold hover:text-secondary transition-colors" href="/#portfolio">Case Studies</a>
+<a class="text-on-surface/70 text-sm font-semibold hover:text-secondary transition-colors" href="/#reviews">Partners</a>
+<a class="flex items-center justify-center rounded-full h-11 px-6 bg-secondary text-white text-sm font-bold hover:brightness-110 transition-all shadow-md" href="/#contact">Consult Now</a>
+</nav>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="max-w-[1200px] mx-auto px-6 pt-20 mb-20">
+<nav class="flex mb-8 text-sm font-medium text-on-surface-variant">
+<a class="hover:text-secondary transition-colors" href="/#portfolio">Case Studies</a>
+<span class="mx-2">/</span>
+<span class="text-on-surface">LMS &amp; Community</span>
+</nav>
+<div class="grid lg:grid-cols-12 gap-12 items-end">
+<div class="lg:col-span-8">
+<div class="flex items-center gap-3 mb-6">
+<span class="w-10 h-[2px] bg-secondary"></span>
+<span class="text-secondary font-bold tracking-widest text-xs uppercase">500k+ Active Students</span>
+</div>
+<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1] mb-8 text-on-surface font-headline">
+                    Scalable LMS &amp; <span class="accent-underline">Community Ecosystem</span>
+</h1>
+</div>
+<div class="lg:col-span-4 pb-2">
+<div class="p-8 bg-white rounded-2xl border border-surface-container shadow-sm">
+<div class="space-y-4">
+<div>
+<p class="text-[10px] font-bold text-secondary uppercase tracking-[0.2em] mb-1">Client</p>
+<p class="font-bold text-lg">EduCore Global</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-secondary uppercase tracking-[0.2em] mb-1">Role</p>
+<p class="font-bold text-lg">Lead System Architect</p>
+</div>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-3 py-1 bg-surface-container-low text-on-surface-variant text-xs font-semibold rounded-full border border-surface-container">WordPress</span>
+<span class="px-3 py-1 bg-surface-container-low text-on-surface-variant text-xs font-semibold rounded-full border border-surface-container">BuddyBoss</span>
+<span class="px-3 py-1 bg-surface-container-low text-on-surface-variant text-xs font-semibold rounded-full border border-surface-container">AWS</span>
+<span class="px-3 py-1 bg-surface-container-low text-on-surface-variant text-xs font-semibold rounded-full border border-surface-container">React</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Feature Image -->
+<div class="w-full max-w-[1200px] mx-auto px-6 mb-24">
+<div class="aspect-[21/9] rounded-lg overflow-hidden bg-white shadow-xl p-3 border border-surface-container">
+<img class="w-full h-full object-cover rounded-xl" data-alt="Modern clean workspace with high-end tech equipment, soft natural light, and professional atmosphere representing architectural precision" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2dR2sFNDYKdb3oUkvUuFG5rvPLlfUK-LiKT-7ebTBnLF4ZQgKV7i5q7-tlG6PytHvgRcY71uzAvsjWxeHueZ9pN96EAna-lEXFQAmuHqCJe662W_xMapNW0DYV-vUAp1W74t9g762WioNq5J7XkVkwGzpWaRf3thuYXj62E5AA2-0AusgPcU1oOqxOVmjzLWNsHH8uIrzq4FZBWUIn2PeBLOvjCWee3uV0BgDfDnFRzuv_G8eEZjT9t9gdV1SVEIsd3dHYeWrIzI"/>
+</div>
+</div>
+<!-- The Challenge -->
+<section class="bg-surface-container-low py-28 px-6 mb-24 relative overflow-hidden">
+<div class="absolute -top-20 -right-20 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
+<div class="max-w-[1200px] mx-auto grid md:grid-cols-2 gap-16 items-start relative z-10">
+<div>
+<h2 class="text-4xl font-extrabold tracking-tight mb-8 font-headline">The Challenge</h2>
+<p class="text-lg text-on-surface-variant leading-relaxed mb-6">
+                    EduCore Global faced a critical scaling wall. As their user base crossed half a million students, the existing monolithic WordPress setup struggled under concurrent load, specifically during high-stakes exam windows.
+                </p>
+<p class="text-lg text-on-surface-variant leading-relaxed">
+                    Database contention and inefficient REST API calls led to frequent timeouts, while the lack of synchronization between the Learning Management System and their Open Journal System (OJS) created data silos that frustrated academic researchers.
+                </p>
+</div>
+<div class="space-y-6">
+<div class="flex items-start gap-6 p-8 rounded-2xl bg-white shadow-sm border border-surface-container border-l-4 border-l-secondary">
+<div class="p-3 bg-secondary/10 rounded-xl text-secondary">
+<span class="material-symbols-outlined text-3xl">warning</span>
+</div>
+<div>
+<p class="font-bold text-lg text-on-surface mb-1">High-Concurrency Failure</p>
+<p class="text-on-surface-variant italic">Peak exam windows (50k+ simultaneous users) caused 15s+ response times.</p>
+</div>
+</div>
+<div class="flex items-start gap-6 p-8 rounded-2xl bg-white shadow-sm border border-surface-container border-l-4 border-l-primary">
+<div class="p-3 bg-primary-container/20 rounded-xl text-primary">
+<span class="material-symbols-outlined text-3xl">sync_problem</span>
+</div>
+<div>
+<p class="font-bold text-lg text-on-surface mb-1">OJS Synchronization Gap</p>
+<p class="text-on-surface-variant italic">Manual data entry for peer-reviewed journals was prone to 12% error rates.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Solution / Architecture -->
+<section class="max-w-[1200px] mx-auto px-6 mb-24">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-extrabold tracking-tight mb-4 font-headline">The Architectural Solution</h2>
+<div class="w-24 h-1.5 bg-secondary/20 mx-auto rounded-full mb-6"></div>
+<p class="text-on-surface-variant max-w-2xl mx-auto text-lg italic">Decoupling core functionalities and implementing a high-performance caching layer.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-10">
+<div class="consultant-card border-t-4 border-t-primary">
+<span class="material-symbols-outlined text-primary text-5xl mb-6 block">extension</span>
+<h3 class="text-2xl font-bold mb-4 text-on-surface">Custom Plugin Development</h3>
+<p class="text-on-surface-variant leading-relaxed">Built a proprietary event-driven middleware to bridge WordPress and OJS metadata without blocking PHP execution.</p>
+</div>
+<div class="consultant-card border-t-4 border-t-secondary">
+<span class="material-symbols-outlined text-secondary text-5xl mb-6 block">hub</span>
+<h3 class="text-2xl font-bold mb-4 text-on-surface">OJS Integration</h3>
+<p class="text-on-surface-variant leading-relaxed">Implemented a bi-directional REST API bridge that synchronizes student research directly with OJS publication queues.</p>
+</div>
+<div class="consultant-card border-t-4 border-t-primary">
+<span class="material-symbols-outlined text-primary text-5xl mb-6 block">bolt</span>
+<h3 class="text-2xl font-bold mb-4 text-on-surface">REST API Optimization</h3>
+<p class="text-on-surface-variant leading-relaxed">Refactored the core API endpoints with a Redis-backed caching strategy, reducing DB queries by 85%.</p>
+</div>
+</div>
+</section>
+<!-- Results & Impact -->
+<section class="max-w-[1200px] mx-auto px-6 mb-24">
+<div class="bg-on-surface text-white rounded-2xl p-12 md:p-20 relative overflow-hidden shadow-2xl">
+<div class="absolute top-0 right-0 w-96 h-96 bg-primary-container/10 rounded-full blur-[100px]"></div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12 relative z-10">
+<div class="text-center">
+<p class="text-4xl md:text-6xl font-extrabold text-primary-container mb-2 font-headline">99.9%</p>
+<p class="text-xs font-bold uppercase tracking-[0.3em] opacity-70">Uptime</p>
+</div>
+<div class="text-center">
+<p class="text-4xl md:text-6xl font-extrabold text-primary-container mb-2 font-headline">60%</p>
+<p class="text-xs font-bold uppercase tracking-[0.3em] opacity-70">Faster Loading</p>
+</div>
+<div class="text-center">
+<p class="text-4xl md:text-6xl font-extrabold text-primary-container mb-2 font-headline">500k</p>
+<p class="text-xs font-bold uppercase tracking-[0.3em] opacity-70">Users Scaled</p>
+</div>
+<div class="text-center">
+<p class="text-4xl md:text-6xl font-extrabold text-primary-container mb-2 font-headline">0</p>
+<p class="text-xs font-bold uppercase tracking-[0.3em] opacity-70">Exam Failures</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Deep Dive -->
+<section class="max-w-[1000px] mx-auto px-6 mb-24">
+<h2 class="text-4xl font-extrabold mb-8 font-headline">Technical Deep Dive: <span class="text-secondary">OJS Sync Workflow</span></h2>
+<div class="prose prose-lg text-on-surface-variant leading-relaxed mb-12">
+<p class="text-xl">The core of the solution involved architecting a headless bridge. We utilized WordPress <code>wp_remote_post</code> hooks combined with a custom Redis queue to ensure that research paper submissions remained asynchronous. This meant that if the OJS server was under heavy load, the student's LMS experience remained unaffected.</p>
+</div>
+<div class="bg-on-surface rounded-2xl p-8 font-mono text-sm overflow-x-auto border border-surface-container shadow-xl">
+<pre class="text-surface-container"><code><span class="text-secondary opacity-80">// High-performance Sync Hook</span>
+add_action('lms_submission_complete', function($submission_id) {
+    $payload = prepare_ojs_payload($submission_id);
+    
+    <span class="text-secondary opacity-80">// Dispatch to Asynchronous Queue</span>
+    WP_Async_Task::dispatch('sync_to_ojs_endpoint', [
+        'data' =&gt; $payload,
+        'retry' =&gt; 3
+    ]);
+}, 10, 1);</code></pre>
+</div>
+<div class="mt-12 rounded-2xl overflow-hidden shadow-2xl p-3 bg-white">
+<img class="w-full h-80 object-cover rounded-xl" data-alt="Conceptual diagram showing complex data flow with glowing circuits and clean architectural nodes in a futuristic blue and gold lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwR_aaI3-oG2WSDP8vgzD5-X3cedwn-x0IJpJusNH1LqaIl5yYqxpgF58MhBFVFTDrkvQmb8TbwxaFTg6ttEJxElokgV2vQQFs_Dk639QgIVNzmu2vrR-mJe4YQf2mkdUoon_A3x-796KqxbrM8fbxmcF3utWHcywu2OC6rEDJ4uxclroLBOgBbJsfHgk8JHdIq1PUoxEOrp-0981XqI1xQyGvVHMS9RY5lSS_ig6DOEGHUK6rRxlNr-XdEoQdoYyuYKT6-wL5Lqw"/>
+</div>
+</section>
+<!-- Testimonial -->
+<section class="max-w-[1200px] mx-auto px-6 mb-24">
+<div class="bg-white rounded-2xl p-10 md:p-16 border border-surface-container shadow-lg flex flex-col md:flex-row gap-12 items-center relative overflow-hidden">
+<div class="absolute -bottom-10 -left-10 w-48 h-48 bg-primary-container/10 rounded-full blur-3xl"></div>
+<div class="w-32 h-32 rounded-full overflow-hidden shrink-0 border-4 border-primary-container shadow-xl relative z-10">
+<img alt="Marcus Chen" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVS5Rp1LCFLlZeEWG_s9frG0DbFZKiqN03LCBLszxIE0GAGplpmSP02rRazEn1sWrZ9L03i3xYNmMj1ZI2G6YdoyK1ZZyoIFFLfsx3vp8px5_jmGdhSRoduUzMBxKdlQ_p0PTU668hH_a6FcRnCRGjSXroppJww-cAdjVdJ5C5TGgRX-WCYFfVJfNof3nyjdyqVkP7EF_ZAiVFM4OoGZTD-c_ojjr-44sn6RnUBbH91_g7xjDdg01u6r3bsP8tn1kckF2N9WJNG50"/>
+</div>
+<div class="relative z-10">
+<div class="text-primary-container mb-6 flex">
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+</div>
+<p class="text-2xl font-medium leading-relaxed mb-8 italic text-on-surface">
+                    "Hardip didn't just fix our performance issues; he re-imagined how our entire ecosystem talks to itself. His architectural foresight saved us hundreds of hours in manual data correction and ensured our largest exam window in history went off without a single hiccup."
+                </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div>
+<p class="font-bold text-on-surface text-lg">Marcus Chen</p>
+<p class="text-secondary font-bold text-sm">CTO, EduCore Global</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Next Case Study -->
+<section class="max-w-[1200px] mx-auto px-6 mb-32">
+<a class="group flex items-center justify-between p-12 bg-surface-container-low rounded-2xl transition-all hover:bg-white hover:shadow-xl border border-transparent hover:border-surface-container" href="#">
+<div>
+<p class="text-[10px] font-bold text-secondary uppercase tracking-[0.4em] mb-3">NEXT PROJECT</p>
+<h3 class="text-3xl font-extrabold font-headline group-hover:text-secondary transition-colors">Real-time Financial Dashboard for FinTech SaaS</h3>
+</div>
+<span class="material-symbols-outlined text-4xl text-secondary group-hover:translate-x-3 transition-transform">arrow_right_alt</span>
+</a>
+</section>
+<!-- Final CTA -->
+<section class="py-32 px-6 bg-background relative overflow-hidden" id="contact">
+<div class="absolute top-0 left-0 w-full h-24 bg-surface-container-low organic-curve"></div>
+<div class="max-w-[850px] mx-auto text-center flex flex-col gap-10 relative z-10">
+<div class="flex flex-col gap-4 pt-12">
+<span class="text-secondary font-bold tracking-[0.4em] text-sm uppercase">READY TO COLLABORATE?</span>
+<h2 class="text-on-surface text-5xl md:text-6xl font-extrabold font-headline leading-[1.1]">Let’s Build Your <br/><span class="accent-underline">Next Innovative Platform</span></h2>
+</div>
+<div class="flex items-center justify-center gap-4 py-8">
+<div class="w-16 h-16 rounded-full overflow-hidden border-2 border-primary-container shadow-lg">
+<img alt="Hardip Parmar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uhuTy7uOfcV3bxKSFnK8RH5S6EZqWVyIKgxgGbPbHKZaIxnDn1c3yZuXg6B1t5Weh_Me_yvTRvOgseXInxRTaG6E_RlGkgNeQBxnm0NIF5AV6S90xsDmv0WwYZNLJ-hlcUbOM2hC8rk6rcTDEml7B0guxGZFUFRTlZye03NlSXIJZRhKVZpj3HtRv6zC3cNYjhqNwJGC3nm51Q8FgFVo9JVqfSMyoqwqZkvLFM6nGGr_vXDEqEsm0do2o--qvy6RHPvx3PoQse33g"/>
+</div>
+<div class="text-left">
+<p class="font-bold text-on-surface">Hardip Parmar</p>
+<p class="text-on-surface-variant text-sm">Technical Architect</p>
+</div>
+</div>
+<p class="text-on-surface-variant text-xl leading-relaxed max-w-2xl mx-auto">
+                Let's discuss how we can scale your WordPress ecosystem for high-concurrency and seamless integrations.
+            </p>
+<div class="flex flex-wrap justify-center gap-6 pt-6">
+<a class="flex items-center gap-4 bg-secondary text-white px-12 py-6 rounded-full font-extrabold text-xl shadow-xl hover:shadow-2xl hover:brightness-110 active:scale-95 transition-all" href="mailto:contact@hardipparmar.com">
+<span class="material-symbols-outlined">rocket_launch</span>
+                    Start the Conversation
+                </a>
+<a class="flex items-center gap-4 bg-white text-on-surface px-12 py-6 rounded-full font-bold text-xl border border-surface-container hover:border-secondary transition-all shadow-sm" href="#">
+<span class="material-symbols-outlined">link</span>
+                    LinkedIn
+                </a>
+</div>
+</div>
+</section>
+</main>
+<footer class="py-16 px-6 bg-background border-t border-surface-container-high text-center">
+<div class="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="flex items-center gap-3">
+<div class="size-6 text-secondary/50">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M6 6H42L36 24L42 42H6L12 24L6 6Z" fill="currentColor"></path></svg>
+</div>
+<p class="text-on-surface-variant text-sm font-bold font-headline uppercase tracking-widest">Hardip Parmar</p>
+</div>
+<p class="text-on-surface-variant text-sm">
+            © 2024 Hardip Parmar. Architected for Scale &amp; Innovation.
+        </p>
+</div>
+</footer>
+</body></html>
