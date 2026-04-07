@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { useEffect } from 'react';
 import { Header } from './components/layout/Header';
@@ -26,11 +26,34 @@ function ScrollToTop() {
   return null;
 }
 
+function GitHubPagesRedirect() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // Handle GitHub Pages SPA redirect
+    const urlParams = new URLSearchParams(window.location.search);
+    const redirectPath = urlParams.get('p');
+
+    if (redirectPath) {
+      // Remove the redirect parameter and navigate to the original path
+      const cleanUrl = new URL(window.location.href);
+      cleanUrl.searchParams.delete('p');
+      window.history.replaceState({}, '', cleanUrl.toString());
+
+      // Navigate to the original path
+      navigate(redirectPath, { replace: true });
+    }
+  }, [navigate]);
+
+  return null;
+}
+
 function App() {
   return (
     <HelmetProvider>
       <Router>
         <ScrollToTop />
+        <GitHubPagesRedirect />
         <div className="min-h-screen bg-background font-body text-on-surface selection:bg-primary-container/40">
           <Header data={typedGlobalData} />
 
