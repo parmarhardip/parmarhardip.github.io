@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting...</title>
+    <script>
+      // GitHub Pages SPA redirect hack
+      // This script redirects all 404 traffic to the main index.html page
+      // The main page will then handle the routing client-side
+
+      // Store the current path and search parameters
+      const path = window.location.pathname;
+      const search = window.location.search;
+      const hash = window.location.hash;
+
+      // Construct the redirect URL to index.html with path info
+      const redirectUrl = window.location.origin + '/?p=' + path + search + hash;
+
+      // Redirect immediately
+      window.location.replace(redirectUrl);
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to portfolio...</p>
+  </body>
+</html>
