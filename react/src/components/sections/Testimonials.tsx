@@ -9,6 +9,7 @@ interface TestimonialsProps {
 export const Testimonials = ({ data }: TestimonialsProps) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
 
   // Check if mobile on mount and resize
   useEffect(() => {
@@ -29,14 +30,23 @@ export const Testimonials = ({ data }: TestimonialsProps) => {
     slides.push(data.slice(i, i + itemsPerSlide));
   }
 
-  // Auto-slide functionality
+  // Auto-slide functionality with responsive timing and pause capability
   useEffect(() => {
+    if (isPaused) return;
+
+    // Responsive timing: Mobile gets more time to read
+    const getSlideInterval = () => {
+      if (window.innerWidth < 768) return 8000; // 8 seconds on mobile
+      if (window.innerWidth < 1024) return 7000; // 7 seconds on tablet
+      return 5000; // 5 seconds on desktop
+    };
+
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000); // Change slide every 5 seconds
+    }, getSlideInterval());
 
     return () => clearInterval(interval);
-  }, [slides.length]);
+  }, [slides.length, isPaused]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -77,7 +87,13 @@ export const Testimonials = ({ data }: TestimonialsProps) => {
           </div>
 
           {/* Slider Content */}
-          <div className="overflow-hidden rounded-2xl">
+          <div
+            className="overflow-hidden rounded-2xl"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+            onTouchStart={() => setIsPaused(true)}
+            onTouchEnd={() => setTimeout(() => setIsPaused(false), 3000)} // Resume after 3 seconds on mobile
+          >
             <div
               className="flex transition-transform duration-700 ease-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
