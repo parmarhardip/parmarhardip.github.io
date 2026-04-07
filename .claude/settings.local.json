@@ -1,7 +1,14 @@
 {
   "permissions": {
     "allow": [
-      "Bash(curl -o \"assets/images/plugin-architecture.jpg\" \"https://lh3.googleusercontent.com/aida-public/AB6AXuCNkPG5aH6RxmjCrhkCW7fOERZo-uEfABIrJrB2CML_-J4Tv98z4DFnXmlobrpk9dm2sUnajGA9Ezuk0X_p7-E4NiUj0EFSCdfk7epa0lHh5-vzmSoFij17JMRGY2k0pPANbOHOTVQKE1XLEp7clL4a6EFCUDadHrj-hSvkr-fJqDRwmjlXkBwrMcBMjk1fFOTX-8VcZWWZhyNczTKGjc8ZTQak9lR398wm9PFylNCOqXdsnR4g8UGp126viJd3DvFK963GKjO_gN4\")"
+      "Bash(curl -o \"assets/images/plugin-architecture.jpg\" \"https://lh3.googleusercontent.com/aida-public/AB6AXuCNkPG5aH6RxmjCrhkCW7fOERZo-uEfABIrJrB2CML_-J4Tv98z4DFnXmlobrpk9dm2sUnajGA9Ezuk0X_p7-E4NiUj0EFSCdfk7epa0lHh5-vzmSoFij17JMRGY2k0pPANbOHOTVQKE1XLEp7clL4a6EFCUDadHrj-hSvkr-fJqDRwmjlXkBwrMcBMjk1fFOTX-8VcZWWZhyNczTKGjc8ZTQak9lR398wm9PFylNCOqXdsnR4g8UGp126viJd3DvFK963GKjO_gN4\")",
+      "Read(//Users/hardip/Work/portfolio-site/portfolio-react/**)",
+      "Bash(npm install -D tailwindcss postcss autoprefixer)",
+      "Bash(npx tailwindcss init -p)",
+      "Bash(./node_modules/.bin/tailwindcss init -p)",
+      "Bash(npm install react-router-dom react-helmet-async)",
+      "Bash(npm install -D @types/react-router-dom)",
+      "Read(//Users/hardip/Work/portfolio-site/**)"
     ],
     "deny": [],
     "ask": []
