@@ -91,16 +91,10 @@
     },
     "testimonials": [
       {
-        "quote": "The stability and reliability of our journal platforms improved significantly after the implementation.",
-        "author": "Editorial Team",
-        "title": "Research Journal",
-        "initials": "RJ"
-      },
-      {
-        "quote": "Consistent maintenance and quick support ensured our publishing workflow never stopped.",
-        "author": "Journal Admin",
-        "title": "Academic Publishing",
-        "initials": "JA"
+        "quote": "Hardip helped us set up and customize our journal portal with exceptional precision. His expertise in OJS and academic publishing tools made the entire process smooth, efficient, and stress-free.",
+        "author": "Prakashraj Kumavat",
+        "title": "Editor In Chief , Research Review Journal of Social Science",
+        "initials": "PK"
       }
     ],
     "projects": [

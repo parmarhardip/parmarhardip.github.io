@@ -91,16 +91,10 @@
     },
     "testimonials": [
       {
-        "quote": "This system transformed how we manage events. The automation and moderation workflow significantly reduced manual effort while improving content quality.",
-        "author": "Product Team",
-        "title": "Indian Community",
-        "initials": "IC"
-      },
-      {
-        "quote": "The AI-powered content enhancement and seamless GeoDirectory integration made this solution both scalable and future-ready.",
-        "author": "Tech Lead",
-        "title": "Platform Engineering",
-        "initials": "TL"
+        "quote": "I work closely with Hardip Parmar for my website and find him extremely professional and highly skilled in his work. We continue working with him and consider him one of the best WordPress developers out there. He is also comfortable working across other platforms, and I would strongly recommend him.",
+        "author": "Amit Gupta",
+        "title": "Co-founder, Indian.Community",
+        "initials": "AG"
       }
     ],
     "nextProject": {

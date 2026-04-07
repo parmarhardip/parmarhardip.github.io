@@ -224,39 +224,52 @@ export const CaseStudyPage = ({ data, globalData }: CaseStudyPageProps) => {
         </section>
 
         {/* Testimonials */}
-        <section className="max-w-[1200px] mx-auto px-6 mb-24">
-          <div className="grid md:grid-cols-2 gap-8">
-            {data.testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl p-8 md:p-10 border border-surface-container shadow-lg relative overflow-hidden"
-              >
-                <div className={`absolute -bottom-10 ${index % 2 === 0 ? '-right-10' : '-left-10'} w-48 h-48 bg-primary-container/10 rounded-full blur-3xl`}></div>
-                <div className="relative z-10">
-                  <div className="text-primary-container mb-6 flex">
-                    <Icon name="format_quote" className="text-4xl" />
+        {data.testimonials.map((testimonial, index) => (
+          <section key={index} className="max-w-[1200px] mx-auto px-6 mb-24">
+            <div className="bg-white rounded-2xl p-10 md:p-16 border border-surface-container shadow-lg flex flex-col md:flex-row gap-12 items-center relative overflow-hidden">
+              <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-primary-container/10 rounded-full blur-3xl"></div>
+
+              {/* Profile Photo */}
+              <div className="w-32 h-32 rounded-full overflow-hidden shrink-0 border-4 border-primary-container shadow-xl relative z-10">
+                {testimonial.image ? (
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.author}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-primary-container/20 flex items-center justify-center text-primary font-bold text-3xl">
+                    {testimonial.initials}
                   </div>
-                  <p className="text-lg font-medium leading-relaxed mb-8 italic text-on-surface">
-                    "{testimonial.quote}"
-                  </p>
-                  <div className="flex items-center gap-4">
-                    <div className={`w-12 h-12 ${
-                      index % 2 === 0
-                        ? 'bg-secondary/10 text-secondary'
-                        : 'bg-primary-container/20 text-primary'
-                    } rounded-full flex items-center justify-center font-bold text-lg`}>
-                      {testimonial.initials}
-                    </div>
-                    <div>
-                      <p className="font-bold text-on-surface">{testimonial.author}</p>
-                      <p className="text-secondary font-bold text-sm">{testimonial.title}</p>
-                    </div>
+                )}
+              </div>
+
+              {/* Content */}
+              <div className="relative z-10">
+                {/* Quote Icon */}
+                <div className="absolute -top-10 -left-10 z-10">
+                  <div className="text-primary/10 group-hover/card:text-primary/20 transition-colors duration-300">
+                    <Icon name="format_quote" className="text-9xl" />
+                  </div>
+                </div>
+
+                <p className="text-2xl font-medium leading-relaxed mb-8 italic text-on-surface">
+                  "{testimonial.quote}"
+                </p>
+
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center text-secondary">
+                    <Icon name="person" />
+                  </div>
+                  <div>
+                    <p className="font-bold text-on-surface text-lg">{testimonial.author}</p>
+                    <p className="text-secondary font-bold text-sm">{testimonial.title}</p>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
-        </section>
+            </div>
+          </section>
+        ))}
 
         {/* Next Case Study */}
         <section className="max-w-[1200px] mx-auto px-6 mb-32">

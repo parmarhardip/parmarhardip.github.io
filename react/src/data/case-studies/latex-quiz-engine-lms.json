@@ -103,16 +103,10 @@
     },
     "testimonials": [
       {
-        "quote": "This solution transformed how we conduct math-based assessments. The ability to evaluate equivalent answers accurately is a game changer.",
-        "author": "Academic Team",
-        "title": "Azha Education",
-        "initials": "AE"
-      },
-      {
-        "quote": "The MathLive integration and backend validation logic provide a seamless experience for both students and instructors.",
-        "author": "Product Manager",
-        "title": "EdTech Platform",
-        "initials": "PM"
+        "quote": "Hardip's ability to navigate complex architectural challenges while maintaining an executive perspective on business goals is rare. He is a pivotal asset to any high-scale project.",
+        "author": "Ahmad Alameldin",
+        "title": "Founder, Azha Education",
+        "initials": "AA"
       }
     ],
     "nextProject": {
