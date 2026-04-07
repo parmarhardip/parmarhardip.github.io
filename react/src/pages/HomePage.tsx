@@ -45,6 +45,41 @@ export const HomePage = ({ data, globalData }: HomePageProps) => {
         <meta property="og:image" content={`${globalData.seo.siteUrl}${globalData.seo.defaultImage}`} />
         <meta property="og:url" content={globalData.seo.siteUrl} />
         <meta name="twitter:card" content="summary_large_image" />
+
+        {/* Structured Data - JSON-LD */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Hardip Parmar",
+            "url": "https://parmarhardip.github.io",
+            "image": "https://parmarhardip.github.io/assets/images/hardip-parmar.jpg",
+            "sameAs": [
+              "https://linkedin.com/in/parmarhardipr"
+            ],
+            "jobTitle": "Senior WordPress Developer & Engineering Partner",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "BuddyBoss LLC"
+            },
+            "knowsAbout": [
+              "WordPress Development",
+              "BuddyBoss",
+              "LearnDash",
+              "LMS Development",
+              "Open Journal Systems (OJS)",
+              "Custom Plugin Development",
+              "Performance Optimization",
+              "Enterprise WordPress"
+            ],
+            "description": "Senior WordPress consultant and engineering partner specializing in scalable LMS platforms, community sites, and enterprise solutions. 10+ years experience with BuddyBoss, LearnDash, and custom WordPress development.",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "parmarhardip1995@gmail.com",
+              "contactType": "Professional"
+            }
+          })}
+        </script>
       </Helmet>
 
       <main>
