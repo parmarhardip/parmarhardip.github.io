@@ -16,7 +16,16 @@ export const Header = ({ data }: HeaderProps) => {
   return (
     <header className="sticky top-0 z-50 bg-background/90 backdrop-blur-lg border-b border-surface-container-high">
       <div className="max-w-[1200px] mx-auto px-6 py-4 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3">
+        <Link
+          to="/"
+          onClick={(e) => {
+            if (isHomePage) {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+          }}
+          className="flex items-center gap-3"
+        >
           <div className="size-8 text-secondary">
             <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
               <path d={data.navigation.logo.icon} fill="currentColor" />
@@ -65,10 +74,11 @@ export const Header = ({ data }: HeaderProps) => {
                 className="block text-on-surface/70 font-semibold hover:text-secondary transition-colors py-2"
                 href={isHomePage ? item.href : `/${item.href}`}
                 onClick={(e) => {
-                  if (isHomePage) {
-                    handleSmoothScroll(e, item.href);
-                  }
                   setIsMobileMenuOpen(false);
+                  if (isHomePage) {
+                    // Small delay to let menu close first
+                    setTimeout(() => handleSmoothScroll(e, item.href), 100);
+                  }
                 }}
               >
                 {item.label}
@@ -78,10 +88,11 @@ export const Header = ({ data }: HeaderProps) => {
               className="block w-full text-center rounded-full py-3 px-6 bg-secondary text-white font-bold hover:brightness-110 transition-all shadow-md mt-4"
               href={isHomePage ? data.navigation.cta.href : `/${data.navigation.cta.href}`}
               onClick={(e) => {
-                if (isHomePage) {
-                  handleSmoothScroll(e, data.navigation.cta.href);
-                }
                 setIsMobileMenuOpen(false);
+                if (isHomePage) {
+                  // Small delay to let menu close first
+                  setTimeout(() => handleSmoothScroll(e, data.navigation.cta.href), 100);
+                }
               }}
             >
               {data.navigation.cta.text}
