@@ -23,7 +23,7 @@ export const Contact = ({ data }: ContactProps) => {
           {data.description}
         </p>
 
-        <CTAButtons email={data.email} linkedinUrl={data.linkedinUrl} />
+        <CTAButtons linkedinUrl={data.linkedinUrl} />
       </div>
     </section>
   );
