@@ -2,17 +2,14 @@ import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import type { GlobalSiteData } from '../types/content';
 import { Icon } from '../components/ui/Icon';
+import { sendContactEmail, isEmailJSConfigured, type ContactFormData } from '../services/emailService';
 
 interface ContactPageProps {
   globalData: GlobalSiteData;
 }
 
-interface FormData {
-  name: string;
-  email: string;
-  projectType: string;
-  projectDetails: string;
-}
+// Use ContactFormData from emailService
+type FormData = ContactFormData;
 
 export const ContactPage = ({ globalData }: ContactPageProps) => {
   const [formData, setFormData] = useState<FormData>({
@@ -37,13 +34,18 @@ export const ContactPage = ({ globalData }: ContactPageProps) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // For now, just simulate form submission
-    // This is where email service integration will be added later
     try {
-      await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate API call
-      console.log('Form submitted:', formData);
+      // Check if EmailJS is configured
+      if (!isEmailJSConfigured()) {
+        throw new Error('Email service is not configured. Please contact me directly via email.');
+      }
+
+      // Send email using EmailJS
+      await sendContactEmail(formData);
+
       setSubmitStatus('success');
-      // Reset form
+
+      // Reset form on successful submission
       setFormData({
         name: '',
         email: '',
@@ -51,11 +53,12 @@ export const ContactPage = ({ globalData }: ContactPageProps) => {
         projectDetails: ''
       });
     } catch (error) {
+      console.error('Contact form error:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
-      // Reset status after 5 seconds
-      setTimeout(() => setSubmitStatus('idle'), 5000);
+      // Reset status after 8 seconds
+      setTimeout(() => setSubmitStatus('idle'), 8000);
     }
   };
 
@@ -92,7 +95,7 @@ export const ContactPage = ({ globalData }: ContactPageProps) => {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
             {/* Contact Form */}
-            <div className="lg:col-span-7 bg-white p-8 md:p-12 rounded-lg border border-surface-container shadow-sm hover:shadow-xl transition-all duration-500">
+            <div className="lg:col-span-7 contact-card !p-8 md:!p-12">
               <form onSubmit={handleSubmit} className="space-y-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="flex flex-col gap-2">
@@ -106,7 +109,7 @@ export const ContactPage = ({ globalData }: ContactPageProps) => {
                       onChange={handleInputChange}
                       placeholder="John Doe"
                       required
-                      className="bg-surface-container-low border-none rounded-lg px-6 py-4 focus:ring-2 focus:ring-primary-container text-on-surface placeholder:text-on-surface-variant/50 outline-none w-full transition-all"
+                      className="input-field"
                     />
                   </div>
                   <div className="flex flex-col gap-2">
@@ -120,7 +123,7 @@ export const ContactPage = ({ globalData }: ContactPageProps) => {
                       onChange={handleInputChange}
                       placeholder="john@company.com"
                       required
-                      className="bg-surface-container-low border-none rounded-lg px-6 py-4 focus:ring-2 focus:ring-primary-container text-on-surface placeholder:text-on-surface-variant/50 outline-none w-full transition-all"
+                      className="input-field"
                     />
                   </div>
                 </div>
@@ -129,18 +132,23 @@ export const ContactPage = ({ globalData }: ContactPageProps) => {
                   <label className="text-xs font-bold tracking-widest uppercase text-secondary">
                     Project Type
                   </label>
-                  <select
-                    name="projectType"
-                    value={formData.projectType}
-                    onChange={handleInputChange}
-                    className="bg-surface-container-low border-none rounded-lg px-6 py-4 focus:ring-2 focus:ring-primary-container text-on-surface appearance-none cursor-pointer outline-none w-full transition-all"
-                  >
-                    <option>Enterprise WordPress Consultation</option>
-                    <option>LMS Architecture & Setup</option>
-                    <option>Custom Plugin Development</option>
-                    <option>Performance Optimization</option>
-                    <option>Other Inquiry</option>
-                  </select>
+                  <div className="relative">
+                    <select
+                      name="projectType"
+                      value={formData.projectType}
+                      onChange={handleInputChange}
+                      className="input-field appearance-none cursor-pointer"
+                    >
+                      <option>Enterprise WordPress Consultation</option>
+                      <option>LMS Architecture & Setup</option>
+                      <option>Custom Plugin Development</option>
+                      <option>Performance Optimization</option>
+                      <option>Other Inquiry</option>
+                    </select>
+                    <div className="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none">
+                      <Icon name="expand_more" className="text-xl text-on-surface-variant" />
+                    </div>
+                  </div>
                 </div>
 
                 <div className="flex flex-col gap-2">
@@ -154,7 +162,7 @@ export const ContactPage = ({ globalData }: ContactPageProps) => {
                     placeholder="Tell me about your goals, timeline, and current technical challenges..."
                     rows={5}
                     required
-                    className="bg-surface-container-low border-none rounded-lg px-6 py-4 focus:ring-2 focus:ring-primary-container text-on-surface placeholder:text-on-surface-variant/50 outline-none w-full transition-all resize-none"
+                    className="input-field resize-none"
                   />
                 </div>
 
@@ -192,23 +200,36 @@ export const ContactPage = ({ globalData }: ContactPageProps) => {
 
             {/* Alternative Actions (Right Column) */}
             <div className="lg:col-span-5 space-y-12">
-              {/* Quick Contact */}
-              <section className="bg-white p-10 rounded-lg border border-surface-container shadow-sm hover:shadow-xl transition-all duration-500">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center">
-                    <Icon name="schedule" className="text-2xl text-secondary" />
-                  </div>
-                  <div>
-                    <h3 className="font-headline font-extrabold text-xl text-on-surface">Schedule a Call</h3>
-                    <p className="text-on-surface-variant text-sm">Direct 1-on-1 consultation</p>
-                  </div>
+              {/* Profile Subtle Integration */}
+              <div className="flex items-center gap-6 mb-8">
+                <div className="relative">
+                  <div className="absolute -inset-1 bg-gradient-to-tr from-primary-container to-secondary rounded-full opacity-20"></div>
+                  <img
+                    alt="Hardip Parmar"
+                    className="relative w-20 h-20 rounded-full object-cover border-4 border-white shadow-lg"
+                    src="/assets/images/hardip-parmar.jpg"
+                  />
                 </div>
-                <p className="text-on-surface-variant mb-6 leading-relaxed">
-                  Prefer to discuss your project in real-time? Let's schedule a strategic consultation call.
+                <div>
+                  <p className="font-headline font-extrabold text-xl text-on-surface">Hardip Parmar</p>
+                  <p className="text-sm font-medium text-secondary">Senior WordPress Engineer</p>
+                </div>
+              </div>
+
+              {/* Schedule a Call */}
+              <section className="bg-surface-container-low rounded-2xl p-10 border border-surface-container shadow-sm">
+                <div className="flex items-center gap-4 mb-6 text-secondary">
+                  <div className="p-3 bg-secondary/10 rounded-xl">
+                    <Icon name="calendar_month" className="text-2xl" />
+                  </div>
+                  <h3 className="font-headline font-extrabold text-xl">Schedule a Call</h3>
+                </div>
+                <p className="text-on-surface-variant mb-8 leading-relaxed">
+                  Prefer a face-to-face discussion? Skip the queue and book a 30-minute strategy session directly on my calendar.
                 </p>
                 <a
                   href="#"
-                  className="group flex items-center gap-2 text-secondary font-bold hover:text-primary transition-colors"
+                  className="inline-flex items-center gap-3 text-on-surface font-headline font-extrabold accent-underline pb-1 transition-all group"
                 >
                   Book a Strategy Call
                   <Icon name="arrow_forward" className="text-sm group-hover:translate-x-1 transition-transform" />
@@ -216,52 +237,74 @@ export const ContactPage = ({ globalData }: ContactPageProps) => {
               </section>
 
               {/* Direct Contact */}
-              <section className="bg-white p-10 rounded-lg border border-surface-container shadow-sm hover:shadow-xl transition-all duration-500">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 bg-primary-container/20 rounded-full flex items-center justify-center">
-                    <Icon name="alternate_email" className="text-2xl text-primary" />
+              <section className="px-2 space-y-10">
+                <div>
+                  <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-secondary/60 mb-6">
+                    Direct Contact
+                  </h4>
+                  <div className="space-y-4">
+                    <a
+                      href="mailto:parmarhardip1995@gmail.com"
+                      className="flex items-center gap-4 text-xl font-headline font-extrabold text-on-surface hover:text-secondary transition-colors"
+                    >
+                      <Icon name="mail" className="text-secondary/40" />
+                      parmarhardip1995@gmail.com
+                    </a>
+                    <a
+                      href="tel:+918511202301"
+                      className="flex items-center gap-4 text-xl font-headline font-extrabold text-on-surface hover:text-secondary transition-colors"
+                    >
+                      <Icon name="phone" className="text-secondary/40" />
+                      +91 8511202301
+                    </a>
                   </div>
-                  <div>
-                    <h3 className="font-headline font-extrabold text-xl text-on-surface">Direct Contact</h3>
-                    <p className="text-on-surface-variant text-sm">Immediate response via email</p>
+                </div>
+                <div>
+                  <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-secondary/60 mb-6">
+                    Digital Presence
+                  </h4>
+                  <div className="flex flex-wrap gap-8">
+                    <a
+                      href="https://linkedin.com/in/parmarhardipr"
+                      target="_blank"
+                      rel="noopener"
+                      className="font-headline font-extrabold text-on-surface hover:text-secondary transition-colors accent-underline"
+                    >
+                      LinkedIn
+                    </a>
+                    <a
+                      href="https://github.com/parmarhardip"
+                      target="_blank"
+                      rel="noopener"
+                      className="font-headline font-extrabold text-on-surface hover:text-secondary transition-colors accent-underline"
+                    >
+                      GitHub
+                    </a>
                   </div>
                 </div>
-                <p className="text-on-surface-variant mb-4 leading-relaxed">
-                  For urgent inquiries or quick questions.
-                </p>
-                <div className="space-y-3">
-                  <a
-                    href="mailto:parmarhardip1995@gmail.com"
-                    className="group flex items-center gap-2 text-secondary font-bold hover:text-primary transition-colors"
-                  >
-                    <Icon name="mail" className="text-sm" />
-                    parmarhardip1995@gmail.com
-                  </a>
-                  <a
-                    href="https://linkedin.com/in/parmarhardipr"
-                    target="_blank"
-                    rel="noopener"
-                    className="group flex items-center gap-2 text-secondary font-bold hover:text-primary transition-colors"
-                  >
-                    <Icon name="link" className="text-sm" />
-                    LinkedIn Profile
-                  </a>
-                </div>
-              </section>
-
-              {/* Response Time */}
-              <section className="bg-surface-container-low p-8 rounded-lg">
-                <div className="flex items-center gap-3 mb-4">
-                  <Icon name="schedule" className="text-2xl text-secondary" />
-                  <h4 className="font-headline font-bold text-lg">Response Time</h4>
-                </div>
-                <p className="text-on-surface-variant text-sm">
-                  I typically respond within <strong>24 hours</strong> during business days.
-                  Complex project discussions may be scheduled for a dedicated call.
-                </p>
               </section>
             </div>
           </div>
+
+          {/* Reassurance/Trust Bar */}
+          <footer className="mt-32 pt-12 border-t border-surface-container-high flex flex-col md:flex-row items-center justify-between gap-8 text-on-surface-variant">
+            <div className="flex items-center gap-3">
+              <Icon name="verified" className="text-secondary text-3xl" />
+              <span className="font-headline font-bold tracking-tight text-on-surface">
+                10+ years of engineering excellence and architectural oversight.
+              </span>
+            </div>
+            <div className="flex items-center gap-8 text-sm font-bold uppercase tracking-widest text-secondary/80">
+              <span className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-green-500"></span>
+                Available for Q2 2026
+              </span>
+              <span className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-blue-500"></span>
+                Global Consultation
+              </span>
+            </div>
+          </footer>
         </div>
       </main>
     </>
